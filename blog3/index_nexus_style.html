@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Stories of IDF — Iconic Dream Focus Journal</title>
+<meta content="IDF Journal — stories, experiences, products, people, events and ideas from Iconic Dream Focus." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<noscript></noscript>
+
+<style id="nexus-editorial-style">
+:root{
+  --nx-bg:#f8fafc;
+  --nx-white:#fff;
+  --nx-ink:#0f172a;
+  --nx-muted:#64748b;
+  --nx-line:#e2e8f0;
+  --nx-soft:#f1f5f9;
+  --nx-blue:#2563eb;
+  --nx-blue-2:#1d4ed8;
+  --nx-blue-soft:#eff6ff;
+  --nx-navy:#020617;
+  --nx-navy-2:#0f172a;
+  --nx-max:1280px;
+  --nx-gap:clamp(16px,2vw,28px);
+  --nx-radius:12px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{
+  margin:0;background:var(--nx-bg);color:var(--nx-ink);
+  font-family:"Inter","Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:15px;line-height:1.6;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+body.modal-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+button{cursor:pointer}
+img,video{display:block;max-width:100%}
+h1,h2,h3,h4,p{margin:0}
+h1,h2,h3,h4,.serif{font-family:"Inter","Plus Jakarta Sans",sans-serif}
+.wrap{width:min(var(--nx-max),calc(100% - clamp(32px,5vw,72px)));margin-inline:auto}
+.eyebrow,.storyTag,.ideaNo,.buildIndex,.eventMeta,.oeb-stage-number,.prodTag{
+  font-size:10px;line-height:1.3;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:800;color:var(--nx-blue);
+}
+.reveal{opacity:0;transform:translateY(10px);transition:opacity .45s ease,transform .45s ease}
+.reveal.show{opacity:1;transform:none}
+.zoom{overflow:hidden;background:#e8eef6}
+.zoom img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+article:hover>.zoom img,.eventLook:hover .zoom img,.gallery figure:hover img{transform:scale(1.025)}
+.read{
+  display:inline-flex;align-items:center;gap:7px;margin-top:auto;
+  padding:0;border:0;background:none;color:var(--nx-blue);
+  font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  transition:gap .2s ease,color .2s ease;
+}
+.read span{color:var(--nx-blue);transition:transform .2s ease}
+.read:hover{color:var(--nx-navy);gap:10px}
+.read:hover span{transform:translateX(3px)}
+:focus-visible{outline:2px solid var(--nx-blue);outline-offset:3px}
+
+/* NAVEX / NEXUS HEADER */
+.nav{
+  position:sticky;top:0;z-index:40;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--nx-line);
+  box-shadow:0 1px 0 rgba(15,23,42,.02);
+}
+.navin{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:11px;color:var(--nx-navy);font-size:12px;font-weight:800;letter-spacing:.12em}
+.brand img{
+  height:46px;width:auto;max-width:92px;object-fit:contain;
+  background:none;padding:0;border-radius:0;box-shadow:none;
+}
+.brand span{line-height:1;white-space:nowrap}
+.links{display:flex;align-items:center;gap:24px;font-size:11px;font-weight:700;letter-spacing:.07em}
+.links a{color:#475569;transition:color .2s ease}
+.links a:hover{color:var(--nx-blue)}
+.menu{display:none;border:0;background:none;color:var(--nx-navy);font-size:24px}
+
+/* HERO */
+.hero{
+  padding:32px 0 34px;
+  background:#fff;
+  border-bottom:1px solid var(--nx-line);
+}
+.heroGrid{
+  display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);
+  gap:clamp(28px,4vw,60px);align-items:center;
+}
+.hero h1{
+  margin:10px 0 15px;font-size:clamp(48px,6vw,78px);line-height:.98;
+  letter-spacing:-.055em;font-weight:800;color:var(--nx-navy);
+}
+.hero h1 em{display:block;color:var(--nx-blue);font-style:normal;font-weight:800}
+.heroIntro{max-width:560px;font-size:15px;line-height:1.7;color:#475569}
+.heroMeta{
+  display:inline-flex;margin-top:18px;padding:7px 11px;border:1px solid #dbeafe;
+  border-radius:7px;background:var(--nx-blue-soft);box-shadow:none;
+  font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--nx-blue-2)
+}
+.heroMedia{aspect-ratio:16/10;border-radius:14px;border:1px solid var(--nx-line);box-shadow:0 16px 38px rgba(15,23,42,.10)}
+.heroCaption,.caption,.articleFig figcaption,.gallery figcaption{margin-top:7px;font-size:10px;line-height:1.45;color:#94a3b8}
+
+/* DENSE EDITORIAL SECTIONS */
+.section,.cover,.observe-evolve-build{padding:30px 0}
+.section:nth-of-type(even){background:#f8fafc}
+.sectionIntro,.oeb-header{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,390px);
+  gap:var(--nx-gap);align-items:end;margin-bottom:16px;
+}
+.sectionTitle,.peopleCopy h2,.cover h2,.award h2,.oeb-title{
+  margin-top:6px;font-size:clamp(34px,4.4vw,54px);font-weight:800;
+  line-height:.98;letter-spacing:-.045em;color:var(--nx-navy);
+}
+.sectionIntro>p,.oeb-intro-text{font-size:13px;line-height:1.65;color:var(--nx-muted)}
+.sectionIntro>div:first-child{border-left:3px solid var(--nx-blue);padding-left:14px}
+
+/* OBSERVE / EVOLVE / BUILD */
+.observe-evolve-build{background:#fff}
+.oeb-title{display:flex;flex-wrap:wrap;gap:0 .28em}
+.oeb-title em{color:var(--nx-blue);font-style:normal}
+.oeb-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--nx-line);border:1px solid var(--nx-line)}
+.oeb-card{
+  display:flex;flex-direction:column;gap:8px;padding:18px;background:#fff;
+  min-height:250px;transition:background .2s ease;
+}
+.oeb-card:hover{background:#f8fbff}
+.oeb-card .oeb-stage-number{padding:0;color:var(--nx-blue)}
+.oeb-card h3{font-size:25px;line-height:1.05;color:var(--nx-navy);font-weight:800}
+.oeb-question{font-size:17px;font-weight:600;color:#334155}
+.oeb-desc{font-size:13px;line-height:1.7;color:var(--nx-muted)}
+.oeb-card .read{margin-top:auto}
+
+/* STORIES */
+.storyList{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:var(--nx-gap)}
+.storyMain,.storySmall{
+  background:#fff;border:1px solid var(--nx-line);box-shadow:0 1px 2px rgba(15,23,42,.03);
+}
+.storyMain{display:flex;flex-direction:column;padding:12px 12px 20px}
+.storyMain>*:not(.zoom){margin-inline:10px}
+.storyMain .zoom{aspect-ratio:3/2;border-radius:9px;margin-bottom:12px}
+.storyMain h3{margin:8px 0;font-size:clamp(28px,3vw,40px);line-height:1.02;color:var(--nx-navy);font-weight:800}
+.storyMain p{color:var(--nx-muted);max-width:590px}
+.storySmallWrap{display:flex;flex-direction:column;gap:8px}
+.storySmall{display:flex;flex-direction:column;padding:14px 16px;transition:box-shadow .2s ease,transform .2s ease}
+.storySmall:hover{box-shadow:0 12px 28px rgba(15,23,42,.07);transform:translateY(-2px)}
+.storySmall h3{font-size:23px;line-height:1.08;color:var(--nx-navy);font-weight:800}
+.storySmall p{font-size:13px;color:var(--nx-muted)}
+
+/* PRODUCTS — NEXUS CORPORATE CATALOG */
+#products .sectionIntro{margin-bottom:20px}
+.firstlook{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.productLook{
+  display:flex;flex-direction:column;background:#fff;border:1px solid var(--nx-line);
+  border-radius:12px;overflow:hidden;min-width:0;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease;
+}
+.productLook:hover{border-color:#cbd5e1;box-shadow:0 14px 32px rgba(15,23,42,.08);transform:translateY(-2px)}
+.productLogoFrame{
+  height:172px;display:flex;align-items:center;justify-content:center;
+  padding:26px;background:#f8fafc;border-bottom:1px solid var(--nx-line);overflow:hidden;
+}
+.productLogo{
+  display:block!important;width:auto!important;height:auto!important;
+  max-width:82%!important;max-height:105px!important;object-fit:contain!important;
+}
+.productBody{display:flex;flex-direction:column;gap:7px;padding:16px;flex:1}
+.productBody h3{font-size:25px;line-height:1.05;color:var(--nx-navy);font-weight:800}
+.productBody p{font-size:13px;line-height:1.65;color:var(--nx-muted)}
+.prodTag{color:var(--nx-blue)}
+
+/* COVER */
+.cover{background:#fff;border-top:1px solid var(--nx-line);border-bottom:1px solid var(--nx-line)}
+.coverGrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--nx-gap);align-items:center}
+.coverImage{aspect-ratio:16/10;border-radius:12px;border:1px solid var(--nx-line)}
+.coverImage img{object-position:50% 30%}
+.cover h2{font-size:clamp(38px,4.8vw,60px);margin:8px 0 10px}
+.coverDeck{font-size:20px;line-height:1.35;font-weight:600;color:#334155;margin-bottom:10px}
+.coverCopy>p:not(.coverDeck){color:var(--nx-muted);margin-bottom:14px;max-width:520px}
+.coverRoute{display:flex;flex-wrap:wrap;gap:6px 16px;margin:0 0 17px}
+.coverRoute span{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#64748b}
+.coverRoute span:not(:last-child)::after{content:"·";margin-left:16px;color:#cbd5e1}
+
+/* EVENTS */
+.eventList{display:flex;flex-direction:column;gap:10px}
+.eventLook{
+  display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:28px;align-items:center;
+  padding:9px;background:#fff;border:1px solid var(--nx-line);border-radius:12px;
+  transition:box-shadow .25s ease,transform .25s ease;
+}
+.eventLook:hover{box-shadow:0 14px 32px rgba(15,23,42,.07);transform:translateY(-2px)}
+.eventLook.reverse{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+.eventLook.reverse .eventImage{order:2}
+.eventImage{aspect-ratio:16/9;border-radius:9px}
+.eventCopy{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:8px 14px}
+.eventLook.reverse .eventCopy{padding:8px 14px}
+.eventCopy h3{font-size:clamp(28px,3vw,40px);line-height:1.03;color:var(--nx-navy);font-weight:800}
+.eventCopy p{font-size:13px;line-height:1.7;color:var(--nx-muted);max-width:500px}
+
+/* AWARD / DARK NEXUS BRIEF */
+.award{
+  background:linear-gradient(120deg,#020617,#0f172a 60%,#172554)!important;color:#fff;
+  border:0!important;
+}
+.awardGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:var(--nx-gap);align-items:center}
+.award .eyebrow{color:#60a5fa}
+.award h2{color:#fff;font-size:clamp(34px,4vw,52px);margin:8px 0 12px}
+.award p{max-width:560px;color:#cbd5e1;margin-bottom:17px}
+.award .read{color:#fff}
+.award .read span{color:#60a5fa}
+.award figure{aspect-ratio:4/3;border-radius:12px;background:#020617;border:1px solid #1e293b;overflow:hidden}
+
+/* BUILD */
+.buildGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.buildPiece{display:flex;flex-direction:column;gap:9px;padding:12px;background:#fff;border:1px solid var(--nx-line);border-radius:12px}
+.buildPiece video{aspect-ratio:16/9;object-fit:cover;border-radius:9px;background:#020617;margin-bottom:4px}
+.buildPiece h3{font-size:27px;line-height:1.05;color:var(--nx-navy);font-weight:800}
+.buildPiece p{font-size:13px;color:var(--nx-muted)}
+
+/* PEOPLE */
+.peopleGrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,4vw,54px);align-items:center}
+.peopleGrid .zoom{aspect-ratio:4/3;border-radius:12px;border:1px solid var(--nx-line)}
+.peopleCopy{display:flex;flex-direction:column;gap:11px}
+.peopleCopy h2{font-size:clamp(34px,3.8vw,48px);margin:0}
+.peopleCopy p{color:var(--nx-muted);font-size:14px}
+
+/* IDEAS / NOTES */
+.ideas,.notes{display:grid;gap:9px}
+.ideas{grid-template-columns:repeat(3,minmax(0,1fr))}
+.notes{grid-template-columns:repeat(4,minmax(0,1fr))}
+.idea,.note{padding:15px;background:#fff;border:1px solid var(--nx-line);border-radius:10px;transition:box-shadow .2s ease,transform .2s ease}
+.idea:hover,.note:hover{box-shadow:0 12px 28px rgba(15,23,42,.07);transform:translateY(-2px)}
+.idea h3,.note h3{margin:8px 0 6px;font-size:21px;line-height:1.12;color:var(--nx-navy);font-weight:800}
+.idea p,.note p{font-size:13px;color:var(--nx-muted)}
+.note h3{font-size:19px}
+
+/* PHOTO JOURNAL */
+.gallery{display:flex;flex-wrap:wrap;gap:14px 10px;align-items:flex-start}
+.gallery figure{margin:0;flex:1 1 30%;min-width:0}
+.gallery .frame{overflow:hidden;border-radius:10px;background:#e8eef6;border:1px solid var(--nx-line);line-height:0}
+.gallery img{width:100%;height:auto;display:block;transition:transform .55s ease}
+.gallery figcaption{padding:7px 2px 0}
+
+/* STORY CONTINUES (closing) */
+.storyContinues{background:var(--nx-bg)!important;padding:44px 0 40px!important;border-top:1px solid var(--nx-line)}
+.storyEnd{max-width:640px;margin:0 auto;text-align:center}
+.storyEnd::before{content:"";display:block;width:36px;height:2px;background:#dc2626;margin:0 auto 20px}
+.storyContinuesStatement{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:600;font-size:clamp(28px,3.6vw,40px);line-height:1.15;color:var(--nx-navy);margin-bottom:12px}
+.storyContinuesText{color:var(--nx-muted);font-size:14px;line-height:1.65;margin:0 auto 18px;max-width:520px}
+.storyContinuesLinks{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 22px}
+.storyContinuesLinks a{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--nx-navy);padding-bottom:3px;border-bottom:1px solid var(--nx-line);transition:color .2s ease,border-color .2s ease}
+.storyContinuesLinks a span{color:var(--nx-blue);margin-left:4px}
+.storyContinuesLinks a:hover{color:var(--nx-blue);border-color:var(--nx-blue)}
+
+/* FOOTER */
+.footer{background:#0f172a;color:#94a3b8;padding:18px 0;border-top:1px solid #1e293b}
+.footerin{display:flex;justify-content:space-between;flex-wrap:wrap;gap:7px 20px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+
+/* STORY READER / MODAL */
+.modal{position:fixed;inset:0;z-index:100;background:#f8fafc;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+.modal.open{opacity:1;visibility:visible}
+.modalPanel{height:100%;overflow-y:auto;outline:none;transform:translateY(8px);transition:transform .3s ease}
+.modal.open .modalPanel{transform:none}
+.modalBar{
+  position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(16px,4vw,40px);height:58px;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(16px);border-bottom:1px solid var(--nx-line)
+}
+.modalBrand{font-size:10px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--nx-navy)}
+.close{
+  display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border:1px solid var(--nx-line);
+  border-radius:7px;background:#fff;color:var(--nx-navy);font-size:10px;font-weight:800;
+  letter-spacing:.12em;text-transform:uppercase
+}
+.close:hover{background:var(--nx-navy);color:#fff}
+.close b{font-size:16px;line-height:1}
+.article{padding-bottom:36px}
+.articleHead{width:min(940px,calc(100% - 40px));margin:30px auto 0}
+.articleKicker{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--nx-blue)}
+.articleHead h2{margin:10px 0;font-size:clamp(40px,5.4vw,70px);font-weight:800;line-height:.98;letter-spacing:-.05em;color:var(--nx-navy)}
+.modalLead{max-width:760px;font-size:20px;line-height:1.45;font-weight:500;color:#475569}
+.articleByline,.bylineMeta{margin-top:12px;font-size:10px;color:#94a3b8}
+.articleHero{width:min(940px,calc(100% - 40px));margin:20px auto 0}
+.articleHero .zoom{aspect-ratio:2/1;border-radius:12px;border:1px solid var(--nx-line)}
+.articleHero.isLogo{display:none}
+.articleTitleRow{display:flex;align-items:center;gap:18px;margin:12px 0 10px}
+.articleTitleRow h2{margin:0!important}
+.articleMark{flex:none;width:68px;height:68px;border-radius:12px;object-fit:contain;background:#fff;border:1px solid var(--nx-line);padding:8px;box-shadow:0 5px 18px rgba(15,23,42,.06)}
+.modalBody{width:min(700px,calc(100% - 40px));margin:22px auto 0}
+.modalBody p{font-size:16px;line-height:1.75;color:#334155;margin-bottom:1em}
+.modalBody>p:first-child{font-size:21px;line-height:1.5;color:var(--nx-navy);font-weight:600}
+.modalBody h3{margin:26px 0 8px;font-size:29px;line-height:1.08;color:var(--nx-navy);font-weight:800}
+.articleFig{width:min(940px,calc(100vw - 40px));position:relative;left:50%;transform:translateX(-50%);margin:22px 0}
+.articleFig .zoom{aspect-ratio:16/9;border-radius:12px;border:1px solid var(--nx-line)}
+.articleSplit{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center;width:min(940px,calc(100vw - 40px));position:relative;left:50%;transform:translateX(-50%);margin:22px 0}
+.articleSplit.flip .articleFig{order:2}
+.articleSplit .articleFig{width:auto;left:0;transform:none;margin:0}
+.articleSplit .zoom{aspect-ratio:4/3}
+.articleQuote{margin:26px 0;padding:20px 24px;border-left:3px solid var(--nx-blue);background:#eff6ff;border-radius:0 10px 10px 0;font-size:26px;line-height:1.25;font-weight:700;color:var(--nx-navy)}
+.articleEnd{width:min(700px,calc(100% - 40px));margin:30px auto 0;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.articleSign{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--nx-navy)}
+.articleSign span{display:block;margin-top:2px;color:var(--nx-blue)}
+.keepReading{width:min(700px,calc(100% - 40px));margin:30px auto 0;padding-top:20px;border-top:1px solid var(--nx-line)}
+.keepReading h4{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--nx-navy)}
+.keepList{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .links{gap:14px}
+  .firstlook,.ideas,.notes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:860px){
+  .menu{display:block}
+  .links{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;padding:8px 24px 14px;background:#fff;border-bottom:1px solid var(--nx-line);box-shadow:0 14px 25px rgba(15,23,42,.08)}
+  .links.mobile{display:flex}
+  .links a{width:100%;padding:10px 0}
+  .heroGrid,.coverGrid,.sectionIntro,.oeb-header,.storyList,.eventLook,.eventLook.reverse,.awardGrid,.peopleGrid{grid-template-columns:1fr}
+  .eventLook.reverse .eventImage{order:0}
+  .eventCopy,.eventLook.reverse .eventCopy{padding:6px 8px 10px}
+  .oeb-grid,.buildGrid{grid-template-columns:1fr}
+  .articleSplit{grid-template-columns:1fr}
+  .articleSplit.flip .articleFig{order:0}
+}
+@media(max-width:640px){
+  .navin{height:68px}
+  .links{top:68px}
+  .brand span{font-size:11px}
+  .hero{padding:24px 0}
+  .hero h1{font-size:48px}
+  .section,.cover,.observe-evolve-build{padding:26px 0}
+  .firstlook,.ideas,.notes{grid-template-columns:1fr}
+  .gallery figure{flex-basis:100%;width:100%!important}
+  .productLogoFrame{height:155px}
+  .footerin{flex-direction:column}
+  .modalBody p{line-height:1.65}
+  .articleQuote{padding:15px 17px;font-size:23px}
+  .keepList{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style></head>
+<body>
+<!-- NAVIGATION -->
+<header class="nav">
+<div class="wrap navin">
+<a class="brand" href="#top">
+<img alt="Iconic Dream Focus" src="assets/idf-logo.png"/>
+<span>IDF JOURNAL</span>
+</a>
+<nav class="links">
+<a href="#stories">Stories</a>
+<a href="#products">Products</a>
+<a href="#events">Experiences</a>
+<a href="#build">Behind the Build</a>
+<a href="#ideas">Ideas</a>
+<a href="#photos">Photos</a>
+<a href="#next">Next</a>
+</nav>
+<button aria-expanded="false" aria-label="Open navigation" class="menu">☰</button>
+</div>
+</header>
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+<div class="wrap heroGrid">
+<div class="reveal">
+<div class="eyebrow">Iconic Dream Focus / Journal</div>
+<h1>Stories from<br/><em>the IDF World.</em></h1>
+<p class="heroIntro">
+        A journal of the ideas we explore, products we shape, people we meet,
+        places that broaden our view, and moments that become part of the IDF journey.
+      </p>
+<div class="heroMeta">Building. Exploring. Experiencing.</div>
+</div>
+<figure class="reveal">
+<div class="heroMedia zoom"><img alt="IDF visual identity" src="assets/branding idf.jpeg"/></div>
+<figcaption class="heroCaption">A journal about the things behind the work.</figcaption>
+</figure>
+</div>
+</section>
+<!-- OBSERVE → EVOLVE → BUILD -->
+<section class="observe-evolve-build" id="approach">
+<div class="wrap">
+<div class="oeb-header reveal">
+<div>
+<div class="eyebrow">The IDF approach</div>
+<h2 class="oeb-title"><span>Observe →</span> <span>Evolve →</span> <em>Build.</em></h2>
+</div>
+<p class="oeb-intro-text">
+        At Iconic Dream Focus, technology starts long before a polished interface or a finished
+        product. It begins with noticing what could work differently, shaping the idea through
+        continuous cycles, and bringing it into reality.
+      </p>
+</div>
+<div class="oeb-grid">
+<article class="oeb-card reveal">
+<figure class="zoom"><img alt="A room full of conversations at the Global Business Conclave" src="assets/same gbc.jpeg"/></figure>
+<div class="oeb-stage-number">Observe</div>
+<h3>Find the opportunity.</h3>
+<div class="oeb-question">What problem are we truly trying to solve?</div>
+<p class="oeb-desc">Look closely at people, businesses, and everyday experiences to uncover what can be improved or rethought entirely.</p>
+<button class="read" data-story="field03">Read story <span>→</span></button>
+</article>
+<article class="oeb-card reveal">
+<figure class="zoom"><img alt="A conversation in Düsseldorf" src="assets/ERGO.jpeg"/></figure>
+<div class="oeb-stage-number">Evolve</div>
+<h3>Keep asking what's next.</h3>
+<div class="oeb-question">How does the idea adapt and grow over time?</div>
+<p class="oeb-desc">Products and concepts advance through feedback, new technology, shifting contexts, and the people who rely on them.</p>
+<button class="read" data-story="beyond">Read story <span>→</span></button>
+</article>
+<article class="oeb-card reveal">
+<figure class="zoom"><img alt="IDF team at a Chennai event" src="assets/team-chennai-event.jpg"/></figure>
+<div class="oeb-stage-number">Build</div>
+<h3>Turn thought into reality.</h3>
+<div class="oeb-question">How do we make it tangible and useful?</div>
+<p class="oeb-desc">Experiment, design, develop, and test until a conceptual insight becomes something people can actually experience.</p>
+<button class="read" data-story="btp">Read story <span>→</span></button>
+</article>
+</div>
+</div>
+</section>
+<!-- STORIES -->
+<section class="section" id="stories">
+<div class="wrap">
+<div class="sectionIntro reveal">
+<div>
+<div class="eyebrow">IDF stories</div>
+<h2 class="sectionTitle">Stories beyond<br/>the headlines.</h2>
+</div>
+<p>Short editorial pieces about the people, observations and experiences that sit behind the visible work.</p>
+</div>
+<div class="storyList">
+<article class="storyMain reveal">
+<div class="zoom"><img alt="IDF team at a Chennai event" src="assets/team-chennai-event.jpg"/></div>
+<div class="storyTag">People · Moments</div>
+<h3>Some journeys are built one conversation at a time.</h3>
+<p>
+          Events are often remembered through photographs. The more interesting part is what
+          happened between them: an introduction, a question, an unexpected perspective, or a
+          conversation that continued after everyone left the room.
+        </p>
+</article>
+<div class="storySmallWrap">
+<article class="storySmall reveal">
+<div class="storyTag">Observation</div>
+<h3>Technology needs a reason to exist.</h3>
+<p>A new technology is not automatically a useful one. The question is what it changes for the person using it.</p>
+</article>
+<article class="storySmall reveal">
+<div class="storyTag">Building</div>
+<h3>Listen before you build.</h3>
+<p>The problem written in a requirement is not always the problem experienced by the person behind it.</p>
+</article>
+<article class="storySmall reveal">
+<div class="storyTag">Perspective</div>
+<h3>Sometimes the useful thing is a new question.</h3>
+<p>Not every meeting produces an answer. Some meetings change the question, which can be just as valuable.</p>
+</article>
+<article class="storySmall reveal">
+<div class="storyTag">Field Note</div>
+<h3>What Happens Before a Product Exists?</h3>
+<p>The quiet work of observations, prototypes, revisions and ideas before anything becomes a polished product.</p>
+<button class="read" data-story="field03">Read the story <span>→</span></button>
+</article>
+</div>
+</div>
+</div>
+</section>
+<!-- PRODUCTS -->
+<section class="section" id="products">
+<div class="wrap">
+<div class="sectionIntro reveal">
+<div>
+<div class="eyebrow">Products — first look</div>
+<h2 class="sectionTitle">Meet the ideas<br/>behind the products.</h2>
+</div>
+<p>A visual first look. Two short sentences. Then, if something catches your attention, open the editorial story behind it.</p>
+</div>
+<div class="firstlook">
+<article class="productLook reveal">
+<div class="productLogoFrame"><img alt="Hy U logo" class="productLogo" src="assets/hyu-logo.png"/></div>
+<div class="productBody">
+<div class="prodTag">Discovery</div>
+<h3>Hy U</h3>
+<p>Food. Travel. Discovery. People. Hy U explores a connected way to discover experiences, communities and places through one growing ecosystem.</p>
+<button class="read" data-story="hyu">Read the story <span>→</span></button>
+</div>
+</article>
+<article class="productLook reveal">
+<div class="productLogoFrame"><img alt="HYWA logo" class="productLogo" src="assets/hywa.jpeg"/></div>
+<div class="productBody">
+<div class="prodTag">AI Companion</div>
+<h3>HYWA</h3>
+<p>Heartificially Yours Working Angel explores a more natural relationship between people and AI through conversation, assistance and context.</p>
+<button class="read" data-story="hywa">Read the story <span>→</span></button>
+</div>
+</article>
+<article class="productLook reveal">
+<div class="productLogoFrame"><img alt="Hy Seizz logo" class="productLogo" src="assets/hy-seizz.jpeg"/></div>
+<div class="productBody">
+<div class="prodTag">Places &amp; Experiences</div>
+<h3>Hy Seizz</h3>
+<p>Discover places worth experiencing. Explore a more meaningful way to discover restaurants, hotels and experiences based on the moment and the people behind it.</p>
+<button class="read" data-story="hyseizz">Read the story <span>→</span></button>
+</div>
+</article>
+<article class="productLook reveal">
+<div class="productLogoFrame"><img alt="INAIBA logo" class="productLogo" src="assets/inaiba-logo.png"/></div>
+<div class="productBody">
+<div class="prodTag">Analytics</div>
+<h3>Inaiba</h3>
+<p>Turn business data into clearer decisions. INAIBA brings analytics, forecasting and business intelligence together to help businesses understand what their data is saying.</p>
+<button class="read" data-story="inaiba">Read the story <span>→</span></button>
+</div>
+</article>
+<article class="productLook reveal">
+<div class="productLogoFrame"><img alt="Dream Special logo" class="productLogo" src="assets/drmslp.png"/></div>
+<div class="productBody">
+<div class="prodTag">Storytelling</div>
+<h3>Dream Special</h3>
+<p>Stories made personal. Explores personalized storytelling and calming sleep-time experiences designed around children’s imagination and interests.</p>
+<button class="read" data-story="dream">Read the story <span>→</span></button>
+</div>
+</article>
+<article class="productLook reveal">
+<div class="productLogoFrame"><img alt="Vari Works logo" class="productLogo" src="assets/variworks.jpeg"/></div>
+<div class="productBody">
+<div class="prodTag">GST &amp; Compliance</div>
+<h3>Vari Works</h3>
+<p>Making GST management simpler. Explore intelligent workflows for GST calculations, filing and tax-related processes, helping businesses reduce unnecessary complexity.</p>
+<button class="read" data-story="vari">Read the story <span>→</span></button>
+</div>
+</article>
+<article class="productLook reveal">
+<div class="productLogoFrame"><img alt="Business Transformation Partner logo" class="productLogo" src="assets/business partner.jpeg"/></div>
+<div class="productBody">
+<div class="prodTag">Enterprise</div>
+<h3>Business Transformation Partner</h3>
+<p>A vision for connected enterprise platforms that bring together digital experiences, automation, intelligent workflows and scalable technology.</p>
+<button class="read" data-story="btp">Read the story <span>→</span></button>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- COVER STORY -->
+<section class="cover" id="cover">
+<div class="wrap coverGrid">
+<figure class="coverImage zoom reveal">
+<img alt="John Kiran in Paris beneath the Eiffel Tower" src="assets/john-kiran-paris.jpg"/>
+</figure>
+<div class="coverCopy reveal">
+<div class="eyebrow">Cover story · Experiences</div>
+<h2>Beyond Borders</h2>
+<p class="coverDeck">From South India to Düsseldorf and Paris — a journey in conversations.</p>
+<p>
+        Business gatherings, international meetings and a wider technology
+        community: how a series of places shaped the way IDF looks at its own work.
+      </p>
+<div class="coverRoute">
+<span>South India</span><span>Düsseldorf</span><span>Paris</span><span>VivaTech</span>
+</div>
+<button class="read" data-story="beyond">Read the story <span>→</span></button>
+</div>
+</div>
+</section>
+<!-- EVENTS & EXPERIENCES -->
+<section class="section" id="events">
+<div class="wrap">
+<div class="sectionIntro reveal">
+<div>
+<div class="eyebrow">Events &amp; experiences</div>
+<h2 class="sectionTitle">Experiences that<br/>move us forward.</h2>
+</div>
+<p>Large photographs first. A short introduction next. The longer experience opens only when the reader wants to go deeper.</p>
+</div>
+<div class="eventList">
+<article class="eventLook reveal">
+<figure class="eventImage zoom"><img alt="Global Business Conclave gathering" src="assets/gbc  with ceo.jpeg"/></figure>
+<div class="eventCopy">
+<div class="eventMeta">South India · Business community</div>
+<h3>Global Business Conclave</h3>
+<p>A gathering of entrepreneurs, business leaders and innovators that became an important moment in IDF’s journey. The event also brought recognition to IDF through the Emerging Startup Award for South India.</p>
+<button class="read" data-story="gbc">Read the story <span>→</span></button>
+</div>
+</article>
+<article class="eventLook reverse reveal">
+<figure class="eventImage zoom"><img alt="Düsseldorf business meeting" src="assets/ERGO.jpeg"/></figure>
+<div class="eventCopy">
+<div class="eventMeta">Düsseldorf · Germany</div>
+<h3>From conversations to possibilities.</h3>
+<p>A journey centred around business conversations, collaboration and pitching opportunities with ERGO. A new environment brought a different perspective on technology and international collaboration.</p>
+<button class="read" data-story="dusseldorf">Read the story <span>→</span></button>
+</div>
+</article>
+<article class="eventLook reveal">
+<figure class="eventImage zoom"><img alt="John Kiran in Paris beneath the Eiffel Tower" src="assets/john-kiran-paris.jpg"/></figure>
+<div class="eventCopy">
+<div class="eventMeta">Paris · France</div>
+<h3>A city. A delegation. A wider view.</h3>
+<p>A delegation from Chennai, conversations with the Paris Region ecosystem, Station F and experiences around the wider technology community.</p>
+<button class="read" data-story="paris">Read the story <span>→</span></button>
+</div>
+</article>
+<article class="eventLook reverse reveal">
+<figure class="eventImage zoom"><img alt="VivaTech France" src="assets/vivatech france.jpeg"/></figure>
+<div class="eventCopy">
+<div class="eventMeta">France</div>
+<h3>VivaTech France</h3>
+<p>An opportunity to connect with the Paris Region team and exchange perspectives around technology, innovation and entrepreneurship.</p>
+<button class="read" data-story="vivatech">Read the story <span>→</span></button>
+</div>
+</article>
+<article class="eventLook reveal">
+<figure class="eventImage zoom"><img alt="IDF team at a Chennai event" src="assets/team-chennai-event.jpg"/></figure>
+<div class="eventCopy">
+<div class="eventMeta">Chennai · ITC Chola Sheraton</div>
+<h3>From Conversation to Opportunity</h3>
+<p>A two-day business gathering that brought together people, recognition, the IDF–HY U vision and dashboard-related conversations.</p>
+<button class="read" data-story="chennai">Read the story <span>→</span></button>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- AWARD -->
+<section class="section award">
+<div class="wrap awardGrid">
+<div class="reveal">
+<div class="eyebrow">Awards as stories</div>
+<h2>Emerging Startup Award — South India</h2>
+<p>
+        A moment of recognition for Iconic Dream Focus at the Global Business Conclave. The
+        recognition belongs here not as a badge, but as part of the story of an event, a room,
+        a team and a moment that mattered.
+      </p>
+<button class="read" data-story="award">Read the story <span>→</span></button>
+</div>
+<figure class="zoom reveal"><img alt="John Kiran holding the award" src="assets/john-kiran-award.jpg"/></figure>
+</div>
+</section>
+<!-- BEHIND THE BUILD -->
+<section class="section" id="build">
+<div class="wrap">
+<div class="sectionIntro reveal">
+<div>
+<div class="eyebrow">Behind the build</div>
+<h2 class="sectionTitle">Behind every<br/>finished product.</h2>
+</div>
+</div>
+<div class="buildGrid">
+<article class="buildPiece reveal">
+<video autoplay="" loop="" muted="" playsinline="" preload="metadata" src="./assets/idf-logo-animation.mp4"></video>
+<div class="buildIndex">Product thinking</div>
+<h3>From idea to interface.</h3>
+<p>A finished screen hides the decisions that came before it. The useful story is often in the versions that never shipped.</p>
+</article>
+<article class="buildPiece reveal">
+<video autoplay="" loop="" muted="" playsinline="" preload="metadata" src="./assets/idf-video.mp4"></video>
+<div class="buildIndex">Iteration</div>
+<h3>What changes when an idea meets reality.</h3>
+<p>The requirement is rarely the whole problem. Building reveals what people actually need — and what needs to be rethought.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- PEOPLE -->
+<section class="section">
+<div class="wrap peopleGrid">
+<figure class="reveal">
+<div class="zoom"><img alt="People at a Global Business Conclave gathering" src="assets/gbc  with ceo.jpeg"/></div>
+<figcaption class="caption">A room full of people, perspectives and possibilities.</figcaption>
+</figure>
+<div class="peopleCopy reveal">
+<div class="eyebrow">People</div>
+<h2>People belong in the story, not in a directory.</h2>
+<p>John Kiran appears here when a photograph or experience calls for him: an award moment, an international meeting, a business conversation, a city, a room.</p>
+<p>Other people enter the journal for the same reason. Entrepreneurs, business leaders, colleagues and people encountered along the way become part of a particular story — not a list of titles.</p>
+<p>The journal is interested in what people were talking about, what they noticed, what they were building and what happened next.</p>
+</div>
+</div>
+</section>
+<!-- IDEAS -->
+<section class="section" id="ideas">
+<div class="wrap">
+<div class="sectionIntro reveal">
+<div>
+<div class="eyebrow">Technology &amp; ideas</div>
+<h2 class="sectionTitle">Ideas worth<br/>thinking about.</h2>
+</div>
+<p>Short editorial notes from the work. Not predictions. Not marketing claims. Just questions and observations worth exploring.</p>
+</div>
+<div class="ideas">
+<article class="idea reveal">
+<div class="ideaNo">Product</div>
+<h3>Technology needs a reason to exist.</h3>
+<p>A product becomes meaningful when it improves an experience, simplifies a process, strengthens a connection or makes an opportunity more accessible.</p>
+</article>
+<article class="idea reveal">
+<div class="ideaNo">Data</div>
+<h3>Data alone doesn’t create decisions.</h3>
+<p>Businesses already have numbers. The harder work is understanding what changed, why it changed, what matters and what deserves attention.</p>
+</article>
+<article class="idea reveal">
+<div class="ideaNo">AI</div>
+<h3>The question is not only “Can AI do it?”</h3>
+<p>There is another question: should AI do it, and can it do so in a way that is useful, understandable and grounded in context?</p>
+</article>
+<article class="idea reveal">
+<div class="ideaNo">Building</div>
+<h3>Start before everything is perfect.</h3>
+<p>The first version does not need to answer every question. Sometimes it only needs to exist so the next question can be asked with better information.</p>
+</article>
+<article class="idea reveal">
+<div class="ideaNo">Relationships</div>
+<h3>Many opportunities begin as conversations.</h3>
+<p>A photograph captures the moment. The value often lives in the conversation that happened before it and the relationship that continues after it.</p>
+</article>
+<article class="idea reveal">
+<div class="ideaNo">Evolution</div>
+<h3>A product is never really finished.</h3>
+<p>Users change. Businesses change. Technology changes. Sometimes the most important iteration is changing the idea itself.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- PHOTO JOURNAL -->
+<section class="section" id="photos">
+<div class="wrap">
+<div class="sectionIntro reveal">
+<div>
+<div class="eyebrow">Photo journal</div>
+<h2 class="sectionTitle">A journal in<br/>moments.</h2>
+</div>
+<p>A visual record of places, people, meetings and moments. Captions stay close to what is visible or confirmed.</p>
+</div>
+<div class="gallery">
+<figure class="reveal">
+<div class="frame"><img alt="John Kiran beneath the Eiffel Tower holding the IDF logo" src="assets/john-kiran-paris.jpg"/></div>
+<figcaption>Paris — taking the IDF identity beyond borders.</figcaption>
+</figure>
+<figure class="reveal">
+<div class="frame"><img alt="John Kiran holding the award" src="assets/john-kiran-award.jpg"/></div>
+<figcaption>A recognition marking another chapter.</figcaption>
+</figure>
+<figure class="reveal">
+<div class="frame"><img alt="Düsseldorf meeting" src="assets/ERGO.jpeg"/></div>
+<figcaption>A conversation in Düsseldorf.</figcaption>
+</figure>
+<figure class="reveal">
+<div class="frame"><img alt="VivaTech France" src="assets/vivatech france.jpeg"/></div>
+<figcaption>VivaTech France — conversations that continue.</figcaption>
+</figure>
+<figure class="reveal">
+<div class="frame"><img alt="Global Business Conclave" src="assets/same gbc.jpeg"/></div>
+<figcaption>A room full of conversations.</figcaption>
+</figure>
+<figure class="reveal">
+<div class="frame"><img alt="IDF team in Chennai" src="assets/team-chennai-event.jpg"/></div>
+<figcaption>A team moment in Chennai.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<!-- ANNOUNCEMENTS -->
+<section class="section">
+<div class="wrap">
+<div class="sectionIntro reveal">
+<div>
+<div class="eyebrow">Announcements</div>
+<h2 class="sectionTitle">News and notes<br/>from IDF.</h2>
+</div>
+<p>Updates belong in the journal as notes — not as another corporate navigation system.</p>
+</div>
+<div class="notes">
+<article class="note reveal">
+<div class="eyebrow">Recognition</div>
+<h3>Emerging Startup Award</h3>
+<p>IDF’s recognition at the Global Business Conclave becomes part of the South India story.</p>
+</article>
+<article class="note reveal">
+<div class="eyebrow">Delegation</div>
+<h3>Paris Region &amp; VivaTech</h3>
+<p>Deepening technology exchanges and ecosystem connections in France.</p>
+</article>
+<article class="note reveal">
+<div class="eyebrow">Ecosystem</div>
+<h3>Global Business Conclave</h3>
+<p>Connecting business leaders, entrepreneurs and innovators across regions.</p>
+</article>
+<article class="note reveal">
+<div class="eyebrow">Platforms</div>
+<h3>Connected Ecosystems</h3>
+<p>Expanding platforms across products, enterprise solutions and experiences.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- STORY CONTINUES -->
+<section class="section storyContinues" id="next">
+<div class="wrap storyEnd">
+<div class="storyContinuesStatement">This chapter ends, but the story continues.</div>
+<p class="storyContinuesText">Come back whenever you like — there is always another journey, another idea and another conversation worth writing down.</p>
+<div class="storyContinuesLinks">
+<a href="#stories">Explore stories <span>→</span></a>
+<a href="#products">Discover products <span>→</span></a>
+<a href="#ideas">Explore ideas <span>→</span></a>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="wrap footerin">
+<div>© Iconic Dream Focus (IDF). All rights reserved.</div>
+<div>IDF Journal — Stories from the IDF World</div>
+</div>
+</footer>
+<!-- STORY READER -->
+<div aria-hidden="true" aria-labelledby="modalTitle" aria-modal="true" class="modal" id="storyModal" role="dialog">
+<div class="modalPanel" tabindex="-1">
+<div class="modalBar">
+<span class="modalBrand">IDF Journal</span>
+<button aria-label="Close story" class="close">Close <b>×</b></button>
+</div>
+<article class="article">
+<header class="articleHead">
+<div class="articleKicker"><img alt="" class="articleMark" hidden="" id="modalMark"/><span id="modalTag"></span></div>
+<h2 id="modalTitle"></h2>
+<p class="modalLead" id="modalLead"></p>
+<div class="articleByline"><span class="bylineName">By Iconic Dream Focus</span><span class="bylineMeta" id="modalMeta"></span></div>
+</header>
+<figure class="articleHero" id="modalHero">
+<div class="zoom"><img alt="" id="modalImg" src=""/></div>
+<figcaption class="caption" id="modalCaption"></figcaption>
+</figure>
+<div class="modalBody" id="modalBody"></div>
+<footer class="articleEnd">
+<div class="articleSign">Iconic Dream Focus<span>IDF Journal</span></div>
+<button class="read" id="modalBack">Back to the journal <span>←</span></button>
+</footer>
+<aside class="keepReading" hidden="" id="keepReading">
+<h4>Keep reading</h4>
+<div class="keepList" id="keepList"></div>
+</aside>
+</article>
+</div>
+</div>
+<script>
+/* MOBILE MENU */
+const menuBtn = document.querySelector('.menu');
+const linksNav = document.querySelector('.links');
+if (menuBtn && linksNav) {
+  const setMenu = open => {
+    linksNav.classList.toggle('mobile', open);
+    menuBtn.textContent = open ? '✕' : '☰';
+    menuBtn.setAttribute('aria-expanded', String(open));
+  };
+  menuBtn.addEventListener('click', () => setMenu(!linksNav.classList.contains('mobile')));
+  linksNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+}
+
+/* SCROLL REVEAL */
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* STORY DATA
+   Blocks: {h} subheading · {p} paragraph · {q} pull quote · {fig} [src, alt, caption] · {split} [src, alt, caption, text, flip?]
+   logo:true shows the hero contained on white (product marks). */
+const A = 'assets/';
+const IMG = {
+  gbc:   A + 'gbc  with ceo.jpeg',
+  gbc2:  A + 'same gbc.jpeg',
+  ergo:  A + 'ERGO.jpeg',
+  paris: A + 'john-kiran-paris.jpg',
+  viva:  A + 'vivatech france.jpeg',
+  award: A + 'john-kiran-award.jpg',
+  team:  A + 'team-chennai-event.jpg',
+  brand: A + 'branding idf.jpeg'
+};
+
+const stories = {
+
+  beyond: {
+    tag: 'Experiences · Cover Story',
+    meta: 'South India · Düsseldorf · Paris',
+    title: 'Beyond Borders',
+    lead: 'From South India to Düsseldorf and Paris — a journey measured less in distance than in conversations.',
+    img: IMG.paris, imgAlt: 'John Kiran in Paris beneath the Eiffel Tower',
+    cap: 'Paris — taking the IDF identity beyond borders.',
+    blocks: [
+      { p: 'Most journeys at IDF do not begin with a destination. They begin with a conversation: an introduction at a business gathering, a question from someone in the room, an invitation to meet somewhere new. This story follows a few of those moments across South India, Germany and France, and what they added up to.' },
+      { h: 'Where it began: South India' },
+      { p: 'The Global Business Conclave brought together entrepreneurs, business leaders and innovators in one room. It became an important moment in IDF’s journey, and it also brought recognition: the Emerging Startup Award for South India.' },
+      { fig: [IMG.gbc, 'People at the Global Business Conclave', 'The Global Business Conclave — a room full of people, perspectives and possibilities.'] },
+      { p: 'Recognition is welcome, but the room offered something more lasting: the chance to listen to how other people were building, and to explain what IDF was building in return.' },
+      { h: 'Düsseldorf: a different perspective' },
+      { split: [IMG.ergo, 'Düsseldorf business meeting', 'A conversation in Düsseldorf.', 'In Düsseldorf, the journey centred on business conversations, collaboration and pitching opportunities with ERGO. A new environment brought a different perspective on technology, and on what international collaboration asks of a team.'] },
+      { p: 'Explaining an idea in an unfamiliar setting is a useful discipline. It asks for clarity about what the idea is, who it is for and why it should matter to someone encountering it for the first time.' },
+      { q: 'Some journeys are built one conversation at a time.' },
+      { h: 'Paris: a wider view' },
+      { p: 'In Paris, a delegation from Chennai held conversations with the Paris Region ecosystem and spent time at Station F and around the wider technology community. VivaTech France added another opportunity: to connect with the Paris Region team and exchange perspectives on technology, innovation and entrepreneurship.' },
+      { fig: [IMG.viva, 'VivaTech France', 'VivaTech France — conversations that continue.'] },
+      { h: 'What the journey meant' },
+      { p: 'Across three very different settings, the pattern was the same. The value was rarely in the schedule. It lived in the exchanges between sessions, and in the way each place changed the questions IDF asked of its own work.' },
+      { h: 'Looking forward' },
+      { p: 'Conversations do not end when a trip does. They carry back into products, into how ideas are explained, and into the next room worth walking into.' }
+    ]
+  },
+
+  hyu: {
+    tag: 'Products · Ecosystem', meta: 'Product story',
+    title: 'Hy U',
+    lead: 'Connecting food, travel, discovery and communities into one living ecosystem.',
+    img: A + 'hyu-logo.png', imgAlt: 'Hy U logo', logo: true,
+    blocks: [
+      { p: "Hy U started from a simple observation: modern digital experiences often feel fragmented. When looking for places to visit, food to try, or communities to engage with, people jump between disconnected apps and platforms, repeating the same search in a different place each time." },
+      { p: "That scattering has a cost that is easy to overlook. Every switch between tools breaks the thread of what a person was actually trying to do, which is usually something simple: find a good place, share it with the right people, and enjoy it." },
+      { h: "The problem worth solving" },
+      { p: "Food, travel and community are rarely separate in real life. A dinner is part of a trip; a trip is shaped by the people who recommend it; a community grows around the places it returns to. Most products, however, treat each of these as its own category with its own app, feed and logic." },
+      { h: "The approach" },
+      { p: "By bringing these dimensions together into a cohesive ecosystem, Hy U explores how discovery can feel natural, contextual, and rooted in authentic community interaction. Food, travel, discovery and people are treated as parts of one experience rather than separate categories." },
+      { q: "Discovery is most powerful when it feels effortless and connected to the people around you." },
+      { h: "What guides the thinking" },
+      { p: "Three questions shape the work. Does this help someone discover something they would not have found alone? Does it keep the human context, the people and the stories, attached to the place? And does it feel like one continuous experience rather than a set of tools stitched together?" },
+      { p: "Those questions act as a filter. An idea that does not improve discovery, keep its human context, or fit the wider ecosystem is set aside, however interesting it looks on its own." },
+      { h: "What’s next" },
+      { p: "As the ecosystem expands, the focus remains on refining the underlying interactions and ensuring every feature serves a genuine purpose in the user’s daily journey." },
+      { p: "Growth, in this view, is measured less by how much is added and more by how naturally the pieces fit together." }
+    ]
+  },
+  hywa: {
+    tag: 'Products · Artificial Intelligence', meta: 'Product story',
+    title: 'HYWA',
+    lead: 'Heartificially Yours Working Angel — shaping a natural relationship between people and AI.',
+    img: A + 'hywa.jpeg', imgAlt: 'HYWA logo', logo: true,
+    blocks: [
+      { p: "Artificial intelligence often leads with technical capability rather than human resonance. HYWA explores a different path: assistant technology designed with empathy, context, and genuine conversational flow." },
+      { p: "The name says a lot about the intent. Heartificially Yours Working Angel describes a companion that works for the person using it, and that does so with warmth rather than as a cold command line." },
+      { h: "The problem worth solving" },
+      { p: "Many assistants still expect people to speak in the assistant’s language: precise commands, rigid phrasing, one request at a time. The result is technically capable but rarely comfortable, and it puts the burden of adaptation on the user." },
+      { h: "The approach" },
+      { p: "Instead of forcing users to adapt to rigid command structures, HYWA listens, understands nuance, and provides assistance that feels intuitive and supportive. Conversation, assistance and context are designed together, so that each one strengthens the others." },
+      { q: "AI becomes truly valuable when it understands the context behind the question." },
+      { h: "What guides the thinking" },
+      { p: "Context comes first. The same question can mean different things depending on who asks it, when, and why, so a useful answer begins with understanding the situation rather than matching keywords." },
+      { p: "Tone matters as much as accuracy. A response that is correct but dismissive teaches people to stop asking. HYWA aims for a natural back-and-forth, where help arrives the way it would from a thoughtful colleague." },
+      { h: "What’s next" },
+      { p: "Continued refinement of adaptive conversational workflows and deeper contextual integration across everyday tasks." },
+      { p: "The long-term question is a simple one: what would it take for people to stop thinking of an assistant as software, and start treating it as a dependable part of their day?" }
+    ]
+  },
+  hyseizz: {
+    tag: 'Products · Experience Discovery', meta: 'Product story',
+    title: 'Hy Seizz',
+    lead: 'Discovering places, hotels, and restaurants through the lens of authentic moments.',
+    img: A + 'hy-seizz.jpeg', imgAlt: 'Hy Seizz logo', logo: true,
+    blocks: [
+      { p: "Finding a place to stay or dine is rarely just about ratings. It is about matching the environment to the moment, the mood, and the people sharing the experience." },
+      { p: "Anyone who has chosen a restaurant from a list of stars knows the gap. The highest-rated place is not always the right place for a quiet conversation, a celebration, or a first visit to a new city." },
+      { h: "The problem worth solving" },
+      { p: "Ratings compress an experience into a single number. What gets lost is the atmosphere, the story behind the venue, and the reason a place feels special to the people who love it." },
+      { h: "The approach" },
+      { p: "Hy Seizz rethinks discovery by emphasizing the atmosphere, the story behind the venue, and what makes each location truly worth experiencing, across restaurants, hotels and experiences." },
+      { q: "A great recommendation captures the feeling of being there, not just the address." },
+      { h: "What guides the thinking" },
+      { p: "The moment decides. A recommendation should respond to the occasion and the company, not only to the location, so the same city can offer very different answers on different days." },
+      { p: "Stories matter. Behind most memorable places is a person, a tradition or a small detail that explains why it is worth the trip. Surfacing that context turns a listing into an invitation." },
+      { h: "What’s next" },
+      { p: "Expanding curated destination insights and refining personal recommendation pathways." },
+      { p: "The aim is for every suggestion to feel chosen for the moment, as if it came from a friend who knows the place well." }
+    ]
+  },
+  inaiba: {
+    tag: 'Products · Business Intelligence', meta: 'Product story',
+    title: 'Inaiba',
+    lead: 'Turning complex business data into clear, actionable decisions.',
+    img: A + 'inaiba-logo.png', imgAlt: 'INAIBA logo', logo: true,
+    blocks: [
+      { p: "Businesses are flooded with analytics, yet many struggle to extract clear direction. INAIBA bridges the gap between raw data and confident decision-making." },
+      { p: "Dashboards, reports and exports pile up quickly. The harder part comes afterwards: deciding which numbers deserve attention and what to do about them." },
+      { h: "The problem worth solving" },
+      { p: "More data does not automatically lead to better decisions. When information is scattered across tools and presented without priority, teams spend their time searching and reconciling instead of acting." },
+      { h: "The approach" },
+      { p: "By unifying analytics, forecasting and business intelligence into a coherent interface, Inaiba cuts through noise to highlight what actually matters, and to help businesses understand what their data is saying." },
+      { q: "Clarity is more valuable than volume when steering a growing enterprise." },
+      { h: "What guides the thinking" },
+      { p: "Start with the decision, not the chart. Each view is shaped around a question a business owner or executive actually asks, such as what changed, why it changed, and what is likely to happen next." },
+      { p: "Bring the past and the future together. Looking back at performance is only half the picture; forecasting gives the same information a direction, so that leaders can plan instead of only react." },
+      { h: "What’s next" },
+      { p: "Enhancing predictive modeling features and introducing more intuitive executive summary dashboards." },
+      { p: "The goal stays constant: a business should be able to open Inaiba and understand its own position in minutes." }
+    ]
+  },
+  dream: {
+    tag: 'Products · Personal Storytelling', meta: 'Product story',
+    title: 'Dream Special',
+    lead: 'Personalized storytelling and calming sleep-time experiences for children.',
+    img: A + 'drmslp.png', imgAlt: 'Dream Special logo', logo: true,
+    blocks: [
+      { p: "Bedtime stories shape a child’s imagination and sense of comfort. Dream Special explores how personalized narratives and gentle auditory environments can make winding down a magical part of the day." },
+      { p: "For many families the end of the day is the most important stretch of it: the lights go low, the pace slows, and a story becomes the bridge between a busy day and rest." },
+      { h: "The problem worth solving" },
+      { p: "A single story cannot suit every child. Interests differ, imaginations differ, and what soothes one child may leave another restless. Fixed stories also run out, and repetition can lose its charm." },
+      { h: "The approach" },
+      { p: "Blending gentle storytelling frameworks with calming design principles, Dream Special builds sleep-time experiences around each child’s imagination and interests." },
+      { q: "Imagination is the gentlest bridge into a peaceful night’s sleep." },
+      { h: "What guides the thinking" },
+      { p: "Calm is a design requirement. Pacing, tone and sound are chosen to help a child settle, which means the experience should slow down rather than excite." },
+      { p: "The child is the centre of the story. When a narrative reflects the things a child already loves, it feels like it was made for them, and that sense of ownership makes bedtime something to look forward to." },
+      { h: "What’s next" },
+      { p: "Expanding story libraries and introducing customizable narrative elements tailored to children’s growing curiosities." },
+      { p: "As children grow, so do their interests, and the stories are meant to grow with them." }
+    ]
+  },
+  vari: {
+    tag: 'Products · Intelligent Workflows', meta: 'Product story',
+    title: 'Vari Works',
+    lead: 'Simplifying GST calculations, filings, and tax-related workflows.',
+    img: A + 'variworks.jpeg', imgAlt: 'Vari Works logo', logo: true,
+    blocks: [
+      { p: "Tax compliance is often bogged down by friction, rigid interfaces, and unnecessary complexity. Vari Works approaches financial operations with a focus on streamlined efficiency." },
+      { p: "For a growing business, GST is a recurring obligation that touches invoices, calculations, filings and records, and any step done manually is a step where mistakes can creep in." },
+      { h: "The problem worth solving" },
+      { p: "Compliance work is repetitive and unforgiving. Teams lose time to re-entering figures, cross-checking calculations and tracking deadlines, time that could go into the business itself." },
+      { h: "The approach" },
+      { p: "Designing intelligent workflows for GST calculations, filing and tax-related processes reduces manual burden, minimizes errors, and makes tax management more straightforward for growing businesses." },
+      { q: "Good software removes administrative weight so teams can focus on growth." },
+      { h: "What guides the thinking" },
+      { p: "Accuracy first. In a domain where small errors have real consequences, workflows are designed to make the right path the easy one." },
+      { p: "Simplicity for everyone involved. Business owners and tax professionals look at the same process from different angles, so the experience needs to be clear to both without losing precision." },
+      { h: "What’s next" },
+      { p: "Deepening automation capabilities and refining reporting interfaces for tax professionals and business owners." },
+      { p: "The measure of success is quiet: filing days that feel routine rather than stressful." }
+    ]
+  },
+  btp: {
+    tag: 'Products · Enterprise Platforms', meta: 'Product story',
+    title: 'Business Transformation Partner',
+    lead: 'A vision for connected enterprise platforms and scalable automation.',
+    img: A + 'business partner.jpeg', imgAlt: 'Business Transformation Partner logo', logo: true,
+    blocks: [
+      { p: "Enterprise technology succeeds when digital experiences, automated workflows, and scalable architectures operate as a unified whole rather than isolated silos." },
+      { p: "Many organizations own capable tools that were never designed to work together. Each solves its own problem, yet the business still runs on manual handoffs between them." },
+      { h: "The problem worth solving" },
+      { p: "Transformation projects often start with a tool and look for a problem to fit it. The result is a stack of disconnected systems, more to maintain, and teams that still work around the technology instead of with it." },
+      { h: "The approach" },
+      { p: "Architecting comprehensive transformation frameworks that align technology infrastructure directly with long-term business strategy, bringing together digital experiences, automation and intelligent workflows." },
+      { q: "Transformation is not about adopting every tool — it is about orchestrating the right ones seamlessly." },
+      { h: "What guides the thinking" },
+      { p: "Strategy before software. Each platform decision begins with where the business is heading and works backwards to the technology that supports it." },
+      { p: "Connected by design. Digital experiences, automation and intelligent workflows are planned as parts of one platform, so that data and processes move between them without friction, and so that the system can scale as the business does." },
+      { h: "What’s next" },
+      { p: "Scaling modular platform integration frameworks for enterprise clients across industries." },
+      { p: "A modular approach lets each organization adopt what it needs today and extend it as its ambitions grow." }
+    ]
+  },
+
+  gbc: {
+    tag: 'Events · Community', meta: 'South India',
+    title: 'Global Business Conclave',
+    lead: 'A gathering of entrepreneurs, leaders, and innovators in South India.',
+    img: IMG.gbc, imgAlt: 'Global Business Conclave gathering',
+    cap: 'A room full of people, perspectives and possibilities.',
+    blocks: [
+      { p: "The Global Business Conclave brought together visionaries from across South India to discuss the future of enterprise, innovation, and community building." },
+      { p: "Gatherings like this are easy to describe by their agenda. Their real shape is found in the people who attend: founders, investors, technologists and business leaders, each carrying a different view of what comes next." },
+      { h: "The moment" },
+      { p: "Beyond panels and presentations, the true value lived in the spontaneous conversations between founders, investors, and technologists who share a passion for building." },
+      { fig: [IMG.gbc2, 'Global Business Conclave', 'A room full of conversations.'] },
+      { p: "Those exchanges rarely appear on a programme, yet they are often where ideas sharpen. A question from across a table can send a plan in a new direction." },
+      { q: "An event is only as memorable as the conversations it starts in the hallways." },
+      { h: "Recognition in the room" },
+      { split: [IMG.award, 'John Kiran holding the award', 'A recognition marking another chapter.', 'The event also brought recognition to IDF through the Emerging Startup Award for South India, a moment that became part of the story of the room rather than a headline on its own.', true] },
+      { h: "Why it matters" },
+      { p: "A room full of people building things is a useful mirror. Hearing how others describe their challenges makes it easier to explain your own, and to see where the work connects to a wider community." },
+      { h: "What’s next" },
+      { p: "Carrying the momentum from these gatherings into ongoing collaborative initiatives and regional innovation networks." },
+      { p: "The goal is for the conversations begun at the Conclave to keep going long after the event ends." }
+    ]
+  },
+  dusseldorf: {
+    tag: 'Events · International', meta: 'Düsseldorf · Germany',
+    title: 'From Conversations to Possibilities',
+    lead: 'Collaboration and business exploration in Düsseldorf, Germany.',
+    img: IMG.ergo, imgAlt: 'Düsseldorf business meeting',
+    cap: 'A conversation in Düsseldorf.',
+    blocks: [
+      { p: "Stepping into a new international ecosystem opens fresh perspectives on technology partnerships and enterprise collaboration, highlighted by engagements with ERGO." },
+      { p: "Düsseldorf offered a setting where the conversation was a little different: a new city, a new business culture, and an audience hearing about IDF for the first time." },
+      { h: "The journey" },
+      { p: "The trip was centred on business conversations, collaboration and pitching opportunities. Pitching ideas across borders requires clarity, cultural awareness, and a shared understanding of how global businesses solve complex problems." },
+      { q: "Cross-border collaboration sharpens your vision and tests the universal value of your work." },
+      { h: "Explaining an idea from scratch" },
+      { p: "A new environment brought a different perspective on technology and international collaboration, and a useful test of how clearly the work could be explained." },
+      { p: "With no shared background to lean on, every assumption has to be stated. That discipline tends to improve the idea itself, because anything that cannot be explained simply is usually not yet fully understood." },
+      { h: "What it adds" },
+      { p: "Meetings of this kind widen the frame. They show how organizations elsewhere think about technology, partnership and risk, and they give a team material to bring back home." },
+      { h: "What’s next" },
+      { p: "Nurturing international ties and exploring joint technological ventures across European markets." },
+      { p: "The first meeting is only the start; the value grows through the follow-up conversations that come after it." }
+    ]
+  },
+  paris: {
+    tag: 'Events · Global Ecosystem', meta: 'Paris · France',
+    title: 'A City. A Delegation. A Wider View.',
+    lead: 'Connecting with the Paris Region ecosystem, Station F, and international innovators.',
+    img: IMG.paris, imgAlt: 'John Kiran in Paris beneath the Eiffel Tower',
+    cap: 'Paris — taking the IDF identity beyond borders.',
+    blocks: [
+      { p: "Paris offered an inspiring backdrop for delegation meetings, discussions at Station F, and exchanges with leaders across Europe’s technology community." },
+      { p: "Travelling as a delegation changes the character of a visit. It turns individual meetings into a shared experience, with a team that can compare notes at the end of each day." },
+      { h: "The experience" },
+      { p: "A delegation from Chennai met with the Paris Region ecosystem and spent time around the wider technology community. Immersing in a global innovation hub reinforces the importance of designing solutions with international relevance from day one." },
+      { fig: [IMG.viva, 'VivaTech France', 'VivaTech France — conversations that continue.'] },
+      { q: "Every global city has its own rhythm of innovation; tuning into it expands how you think about building." },
+      { h: "A wider view" },
+      { p: "Spending time at Station F and around Paris’s technology community offered a closer look at how a large ecosystem supports its founders, and at the kinds of conversations that happen when many startups share one environment." },
+      { p: "Seen from there, the questions facing IDF’s own products looked a little different: less local, more connected to what builders everywhere are asking." },
+      { h: "What’s next" },
+      { p: "Continuing engagement with European partners and expanding international horizons." },
+      { p: "The visit leaves behind new contacts and a broader sense of where IDF’s work can travel." }
+    ]
+  },
+  vivatech: {
+    tag: 'Events · Innovation', meta: 'France',
+    title: 'VivaTech France',
+    lead: 'Exchanging perspectives on technology and entrepreneurship at VivaTech.',
+    img: IMG.viva, imgAlt: 'VivaTech France',
+    cap: 'VivaTech France — conversations that continue.',
+    blocks: [
+      { p: "Participating in VivaTech provided a platform to connect with the Paris Region team and discuss emerging ideas in technology and startup growth." },
+      { p: "Large technology events can feel overwhelming, with many stages and many conversations happening at once. The most useful approach is often to slow down and focus on a few good exchanges." },
+      { h: "The exchange" },
+      { p: "Exchanging insights with founders from elsewhere highlighted how shared challenges in AI and automation connect innovators across regions." },
+      { p: "It was a reminder that the problems people are working on, from making technology feel more human to helping businesses run smoothly, are rarely local. A founder in one country is often wrestling with the same question as a founder in another." },
+      { split: [IMG.paris, 'John Kiran in Paris', 'Paris — taking the IDF identity beyond borders.', 'The visit sat alongside wider conversations in Paris, including time with the Paris Region ecosystem and the technology community around it.'] },
+      { q: "Conferences are catalysts; the real work happens in the partnerships forged afterward." },
+      { h: "Conversations that continue" },
+      { p: "The value of an event like this shows up weeks later, in the follow-up message, the introduction that leads somewhere, or the idea that resurfaces in a product discussion back home." },
+      { h: "What’s next" },
+      { p: "Applying insights gathered from VivaTech across current product development." },
+      { p: "The aim is to turn what was heard in Paris into practical improvements in the products being built." }
+    ]
+  },
+  chennai: {
+    tag: 'Events · Chennai Gathering', meta: 'Chennai · ITC Chola Sheraton',
+    title: 'From Conversation to Opportunity',
+    lead: 'A two-day business gathering celebrating community, recognition, and vision.',
+    img: IMG.team, imgAlt: 'IDF team at a Chennai event',
+    cap: 'A team moment in Chennai.',
+    blocks: [
+      { p: "Hosted at the ITC Chola Sheraton, this two-day gathering brought together team members, industry peers, and supporters to celebrate milestones and share the IDF vision." },
+      { p: "Home-city events carry their own warmth. The faces are familiar, the context is shared, and the conversation can go straight to what matters." },
+      { h: "The highlight" },
+      { p: "Conversations ran deep around dashboard architectures, the IDF–HY U vision, and the future of regional tech leadership. As with many gatherings, the moments between sessions mattered as much as the sessions themselves." },
+      { q: "Rooted locally with a vision that extends outward — that is where sustainable growth begins." },
+      { h: "Local roots, wider reach" },
+      { p: "A gathering in Chennai is a reminder of where the work begins. The team, the supporters and the community that surround IDF are here, and the ambition to build products that travel starts from that base." },
+      { p: "Seeing the team together in one room, alongside industry peers, also made the shared direction easier to describe and easier to believe in." },
+      { h: "What’s next" },
+      { p: "Building on the relationships and feedback gathered during the Chennai sessions." },
+      { p: "The conversations from these two days feed directly into the work ahead." }
+    ]
+  },
+  award: {
+    tag: 'Awards as Stories', meta: 'Global Business Conclave · South India',
+    title: 'Emerging Startup Award — South India',
+    lead: 'A moment of recognition for Iconic Dream Focus at the Global Business Conclave.',
+    img: IMG.award, imgAlt: 'John Kiran holding the award',
+    cap: 'A recognition marking another chapter.',
+    blocks: [
+      { p: "Recognition is rarely an endpoint. It is a checkpoint in a much longer narrative of persistence, experimentation, and teamwork." },
+      { h: "The recognition" },
+      { p: "Receiving the Emerging Startup Award for South India at the Global Business Conclave was an affirmation of the quiet, deliberate work happening behind the scenes at IDF." },
+      { p: "Much of that work is invisible from the outside: early experiments, rewritten ideas, long conversations about what a product should and should not be. An award brings a small part of it into the light." },
+      { fig: [IMG.gbc, 'People at the Global Business Conclave', 'The Global Business Conclave — a room full of people, perspectives and possibilities.'] },
+      { q: "An award belongs to the room, the team, and the shared belief that building things right matters." },
+      { h: "What it represents" },
+      { p: "Beyond the moment itself, the award reflects the people who contributed along the way: teammates, collaborators and supporters who helped shape IDF’s direction. It marks another chapter in a story that is still being written." },
+      { h: "What’s next" },
+      { p: "Honoring this milestone by continuing to push boundaries across products, experiences, and community initiatives." },
+      { p: "The best response to recognition is to keep building with the same care." }
+    ]
+  },
+  field03: {
+    tag: 'Field Note', meta: 'Behind the build',
+    title: 'What Happens Before a Product Exists?',
+    lead: 'The quiet work of observations, prototypes, revisions and ideas.',
+    img: IMG.brand, imgAlt: 'IDF visual identity',
+    blocks: [
+      { p: "Long before code is written or interfaces are styled, there is a phase of quiet observation. This is where problems are turned over, discarded, and reframed." },
+      { p: "It is easy to skip, because it produces nothing that can be shown. Yet it shapes everything that follows." },
+      { h: "Observe" },
+      { p: "The work begins by looking closely at people, businesses and everyday experiences: where they slow down, where they work around a tool, and where something feels harder than it should. These small frictions are often the first sign of an opportunity." },
+      { h: "The process" },
+      { p: "We test assumptions through rough sketches and early prototypes that are never meant to see the public eye. Their only job is to teach us what not to build." },
+      { q: "The most important decisions in a product’s life often happen before anyone starts coding." },
+      { h: "Revise, then revise again" },
+      { p: "Early ideas rarely survive intact. Feedback, new technology and changing circumstances reshape them, and each revision brings the idea closer to something people actually need. Treating this as normal, rather than as failure, keeps the work honest." },
+      { h: "Why it matters" },
+      { p: "A product that begins with a well-understood problem is easier to build, easier to explain, and more likely to be useful. The time spent observing is time saved later." },
+      { h: "What’s next" },
+      { p: "Documenting our early-stage exploration frameworks to share more openly with the community." },
+      { p: "Sharing the process, not only the results, is part of how the IDF journal hopes to be useful." }
+    ]
+  }
+};
+
+/* STORY READER */
+const modal      = document.getElementById('storyModal');
+const panel      = modal.querySelector('.modalPanel');
+const modalTag   = document.getElementById('modalTag');
+const modalTitle = document.getElementById('modalTitle');
+const modalLead  = document.getElementById('modalLead');
+const modalMeta  = document.getElementById('modalMeta');
+const modalHero  = document.getElementById('modalHero');
+const modalImg   = document.getElementById('modalImg');
+const modalCap   = document.getElementById('modalCaption');
+const modalBody  = document.getElementById('modalBody');
+let lastTrigger  = null;
+
+const fig = ([src, alt, cap]) =>
+  `<figure class="articleFig"><div class="zoom"><img src="${src}" alt="${alt}" loading="lazy"></div>` +
+  (cap ? `<figcaption>${cap}</figcaption>` : '') + `</figure>`;
+
+function renderBlocks(blocks) {
+  return blocks.map(b => {
+    if (b.h)     return `<h3>${b.h}</h3>`;
+    if (b.p)     return `<p>${b.p}</p>`;
+    if (b.q)     return `<blockquote class="articleQuote">${b.q}</blockquote>`;
+    if (b.fig)   return fig(b.fig);
+    if (b.split) {
+      const [src, alt, cap, text, flip] = b.split;
+      return `<div class="articleSplit${flip ? ' flip' : ''}">${fig([src, alt, cap])}<p>${text}</p></div>`;
+    }
+    return '';
+  }).join('');
+}
+
+function readingTime(data) {
+  const text = [data.lead, ...data.blocks.map(b => b.p || b.q || (b.split && b.split[3]) || '')].join(' ');
+  return Math.max(1, Math.round(text.split(/\s+/).length / 200));
+}
+
+function renderKeepReading(key) {
+  const keys = Object.keys(stories), i = keys.indexOf(key);
+  const grp = k => stories[k].tag.split('·')[0].trim();
+  const same = keys.filter(k => k !== key && grp(k) === grp(key));
+  const pool = same.length >= 2 ? same : keys.filter(k => k !== key);
+  const start = Math.max(0, pool.findIndex(k => keys.indexOf(k) > i));
+  const picks = [pool[start % pool.length], pool[(start + 1) % pool.length]].filter((k, n, a) => k && a.indexOf(k) === n);
+  document.getElementById('keepList').innerHTML = picks.map(k =>
+    `<button class="keepItem" data-key="${k}"><span class="keepTag">${stories[k].tag}</span><strong>${stories[k].title}</strong><em>${stories[k].lead}</em></button>`).join('');
+  document.getElementById('keepReading').hidden = !picks.length;
+}
+
+function openModal(key, trigger) {
+  const data = stories[key];
+  if (!data) return;
+  lastTrigger = trigger || null;
+  modalTag.textContent   = data.tag;
+  modalTitle.textContent = data.title;
+  modalLead.textContent  = data.lead;
+  modalMeta.textContent  = [data.meta, readingTime(data) + ' min read'].filter(Boolean).join('  |  ');
+  modalImg.src = data.img;
+  modalImg.alt = data.imgAlt || data.title;
+  modalCap.textContent = data.cap || '';
+  modalHero.classList.toggle('isLogo', !!data.logo);
+  const mark = document.getElementById('modalMark');
+  if (data.logo) {
+    mark.src = data.img; mark.alt = data.imgAlt || data.title; mark.hidden = false;
+  } else { mark.hidden = true; mark.removeAttribute('src'); }
+  modalBody.innerHTML = renderBlocks(data.blocks);
+  renderKeepReading(key);
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  panel.scrollTop = 0;
+  panel.focus({ preventScroll: true });
+}
+
+document.getElementById('keepList').addEventListener('click', e => {
+  const b = e.target.closest('.keepItem'); if (b) openModal(b.dataset.key, lastTrigger);
+});
+
+function closeModal() {
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+  if (lastTrigger) lastTrigger.focus({ preventScroll: true });
+}
+
+document.querySelectorAll('.read').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    const key = btn.getAttribute('data-story');
+    if (key) openModal(key, btn);
+  });
+});
+
+modal.querySelector('.close').addEventListener('click', closeModal);
+document.getElementById('modalBack').addEventListener('click', closeModal);
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+});
+
+/* PRODUCT LOGOS: crop to fill when the logo shape is close to the frame, otherwise fit whole */
+function fitLogos(){ /* logos are always shown whole (object-fit: contain) */ }
+
+/* PHOTO JOURNAL: justified rows */
+function justifyGallery(){
+  const g = document.querySelector('.gallery'); if (!g) return;
+  const figs = [...g.children], W = g.clientWidth;
+  if (W < 520) { figs.forEach(f => { f.style.width = ''; f.style.flex = ''; }); return; }
+  const gap = parseFloat(getComputedStyle(g).columnGap) || 10;
+  const items = figs.map(f => { const i = f.querySelector('img'); return { f, r: i.naturalWidth / i.naturalHeight }; });
+  if (items.some(x => !x.r || !isFinite(x.r))) return;
+  /* balanced rows: split photos into equal-sized rows (3 per row, 2 on tablets) so every row fills the full width */
+  const per = W < 860 ? 2 : 3;
+  const rows = Math.ceil(items.length / per), base = Math.floor(items.length / rows), extra = items.length % rows;
+  let idx = 0;
+  for (let r = 0; r < rows; r++) {
+    const n = base + (r < extra ? 1 : 0), row = items.slice(idx, idx + n); idx += n;
+    const sum = row.reduce((a, x) => a + x.r, 0);
+    const h = (W - gap * (n - 1)) / sum;
+    row.forEach(x => { x.f.style.flex = '0 0 auto'; x.f.style.width = (x.r * h - 0.5) + 'px'; });
+  }
+}
+function layoutAll(){ fitLogos(); justifyGallery(); }
+document.querySelectorAll('.gallery img, #products .productLogo').forEach(i => { if (!i.complete) i.addEventListener('load', layoutAll); });
+addEventListener('load', layoutAll);
+addEventListener('resize', layoutAll);
+layoutAll();
+
+/* POLISH: progress bar · active nav · hover-ready cards */
+(function(){
+  const bar = document.createElement('div'); bar.id = 'idfProgress'; document.body.prepend(bar);
+  const onScroll = () => {
+    const h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.width = (h > 0 ? scrollY / h * 100 : 0) + '%';
+  };
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  const navLinks = [...document.querySelectorAll('.links a')];
+  const spy = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+  }), { rootMargin: '-40% 0px -55% 0px' });
+  navLinks.forEach(a => { const s = document.querySelector(a.getAttribute('href')); if (s) spy.observe(s); });
+  const settle = new IntersectionObserver((es, o) => es.forEach(e => {
+    if (e.isIntersecting) { setTimeout(() => e.target.classList.add('done'), 1000); o.unobserve(e.target); }
+  }), { threshold: .08 });
+  document.querySelectorAll('.reveal').forEach(el => settle.observe(el));
+})();
+</script>
+</body>
+</html>
