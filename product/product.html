@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Products — Ideas taking shape | Iconic Dream Focus</title>
+<meta name="description" content="Explore the products taking shape at Iconic Dream Focus — Hy U, HYWA, Hy Seizz, INAIBA, Dream Special, Vari Works and Business Transformation Partner — and the stories behind them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#082a5e;
+  --navy-2:#2c3b91;
+  --red:#e11d2b;
+  --red-2:#d71f2d;
+  --ink:#0b1220;
+  --text:#4f586d;
+  --muted:#6b7488;
+  --line:#e4e7ef;
+  --soft:#f5f6fa;
+  --white:#fff;
+  --grad:linear-gradient(90deg,#e11d2b 0%,#7b3a7c 55%,#2c3b91 100%);
+  --btn:linear-gradient(90deg,#d71f2d 0%,#1d2a6e 100%);
+  --max:1700px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:#fff;color:var(--text);font-family:"Inter","Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p{margin:0}
+.wrap{width:min(var(--max),calc(100% - 96px));margin-inline:auto}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;padding:0;transition:padding .3s ease}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:78px;padding:0 6%;background:#fff;transition:all .3s ease}
+.nav.floating{padding:12px 5%}
+.nav.floating .nav-in{height:70px;padding:0 28px;border-radius:24px;background:rgba(255,255,255,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(228,231,239,.9);box-shadow:0 18px 40px rgba(8,42,94,.12)}
+.logo img{height:52px;width:auto}
+.links{display:flex;align-items:center;gap:42px;font-size:16px;color:#1b2234}
+.links a{position:relative;padding:6px 0;transition:color .2s}
+.links a:hover{color:var(--red)}
+.links a.active{color:var(--red)}
+.links a.active::after{content:"";position:absolute;left:50%;bottom:-8px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:13px 22px;border-radius:14px;background:var(--btn);color:#fff;font-weight:600;font-size:16px;box-shadow:0 10px 30px rgba(215,31,45,.28);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(215,31,45,.38)}
+.menu{display:none;border:0;background:none;font-size:26px;color:var(--navy);cursor:pointer}
+
+/* BLOG LANDING */
+.page-head{padding:56px 0 34px;background:radial-gradient(circle at 12% 0%,rgba(44,59,145,.06),transparent 45%)}
+.section-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:48px;align-items:end;margin-bottom:34px}
+.section-head h1,.section-head h2{font-size:clamp(32px,3.9vw,58px);line-height:1.1;font-weight:800;letter-spacing:-.025em;color:var(--ink)}
+.section-head p{font-size:19px;line-height:1.65;color:var(--text);max-width:720px;justify-self:end}
+.feature{display:grid;grid-template-columns:1.13fr 1fr;border:1px solid var(--line);border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 30px 60px rgba(8,42,94,.08);margin-bottom:28px}
+.feature{min-height:480px;max-height:540px}
+.feature>a{display:block;height:100%;overflow:hidden}
+.feature img{width:100%;height:100%;min-height:440px;object-fit:cover;object-position:50% 38%}
+.feature-copy{padding:48px 56px;display:flex;flex-direction:column;justify-content:center;gap:18px}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+.feature h2{font-size:clamp(30px,3.2vw,46px);line-height:1.1;color:var(--ink);font-weight:800;letter-spacing:-.02em}
+.feature p{font-size:19px;line-height:1.7;color:var(--text)}
+.meta{font-size:15px;color:var(--muted)}
+.link{display:inline-flex;align-items:center;gap:8px;color:var(--red);font-weight:700;font-size:18px;transition:gap .2s}
+.link:hover{gap:14px}
+.inside{padding:44px 0 90px}
+.inside-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.inside-card{display:flex;flex-direction:column;gap:12px;padding:30px 28px;border:1px solid var(--line);border-radius:26px;background:#fff;transition:transform .25s,box-shadow .25s,border-color .25s}
+.inside-card:hover{transform:translateY(-4px);border-color:#c9cfe2;box-shadow:0 22px 44px rgba(8,42,94,.1)}
+.inside-card .no{font-size:34px;font-weight:800;color:var(--red)}
+.inside-card h3{font-size:23px;line-height:1.2;color:var(--ink);font-weight:800}
+.inside-card p{font-size:16px;color:var(--text);flex:1}
+
+/* JOURNAL HERO */
+.j-hero{background:var(--navy);color:#fff;padding:56px 0 64px}
+.j-hero-grid{display:grid;grid-template-columns:1fr 1.18fr;gap:60px;align-items:stretch}
+.j-copy{display:flex;flex-direction:column;justify-content:flex-end;gap:20px;padding-bottom:12px;max-width:700px}
+.back{display:inline-flex;align-items:center;gap:10px;font-size:17px;color:#fff;opacity:.92;margin-bottom:18px}
+.back:hover{opacity:1}
+.j-copy .kicker{font-size:15px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.j-copy h1{font-size:clamp(44px,5.4vw,76px);line-height:1.04;font-weight:800;letter-spacing:-.03em;color:#fff}
+.j-copy p{font-size:21px;line-height:1.6;color:rgba(255,255,255,.94)}
+.j-copy .tags{font-size:15px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:10px}
+.collage figure{margin:0;overflow:hidden;border-radius:30px;background:#10336f}
+.collage img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.collage figure:hover img{transform:scale(1.03)}
+.collage .big{grid-column:1/-1;aspect-ratio:2/1}
+.collage .big img{object-position:50% 45%}
+.collage .sm{aspect-ratio:1.4/1}
+.collage .sm.ergo img{object-position:50% 62%}
+.collage .sm.team img{object-position:50% 30%}
+
+/* JOURNAL SECTIONS */
+.section{padding:70px 0}
+.section.tint{background:#fbfbfd}
+.oeb{border:1px solid var(--line);border-radius:30px;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;background:#fff}
+.oeb>div{padding:40px 38px 44px;border-right:1px solid var(--line)}
+.oeb>div:last-child{border-right:0}
+.oeb .no{font-size:42px;font-weight:800;color:var(--red);line-height:1;margin-bottom:26px}
+.oeb h3{font-size:26px;line-height:1.2;font-weight:800;color:var(--ink);margin-bottom:14px}
+.oeb p{font-size:17px;line-height:1.75;color:var(--text)}
+.rows{display:flex;flex-direction:column;gap:20px}
+.row{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center;padding:36px 42px;background:var(--soft);border-left:5px solid var(--red);transition:background .25s,transform .25s}
+.row:hover{background:#eef0f8;transform:translateX(4px)}
+.row h3{font-size:clamp(24px,2.3vw,32px);line-height:1.25;font-weight:800;color:var(--ink);max-width:620px}
+.row p{font-size:19px;line-height:1.7;color:var(--text)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.product{display:flex;flex-direction:column;justify-content:flex-end;gap:12px;padding:28px 30px 32px;min-height:340px;border:1px solid var(--line);border-radius:30px;background:#fff;transition:transform .25s,box-shadow .25s,border-color .25s}
+.product:hover{transform:translateY(-4px);box-shadow:0 24px 48px rgba(8,42,94,.1);border-color:#c9cfe2}
+.product.wide{grid-column:span 2}
+.product .logo-box{flex:1;display:flex;align-items:center;justify-content:center;min-height:130px}
+.product .logo-box img{max-height:84px;max-width:70%;object-fit:contain}
+.product.wide .logo-box img{max-height:112px}
+.product h3{font-size:27px;line-height:1.15;font-weight:800;color:var(--ink)}
+.product p{font-size:17px;line-height:1.65;color:var(--text)}
+.borders{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;margin-bottom:24px}
+.borders.second{grid-template-columns:1fr 1fr;margin-bottom:0}
+.card{border:1px solid var(--line);border-radius:30px;overflow:hidden;background:#fff;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s}
+.card:hover{box-shadow:0 24px 48px rgba(8,42,94,.1);transform:translateY(-3px)}
+.card .ph{overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.card:hover .ph img{transform:scale(1.03)}
+.borders .card.lead .ph{aspect-ratio:1.6/1}
+.borders .card.lead .ph img{object-position:50% 30%}
+.borders .card.side .ph{aspect-ratio:1.78/1}
+.borders .card.side .ph img{object-position:50% 70%}
+.borders.second .ph{aspect-ratio:1.9/1}
+.borders.second .paris .ph img{object-position:50% 78%}
+.borders.second .viva .ph img{object-position:50% 40%}
+.card-body{padding:26px 30px 32px;display:flex;flex-direction:column;gap:10px}
+.card-body h3{font-size:clamp(22px,2vw,28px);line-height:1.2;font-weight:800;color:var(--ink)}
+.card-body p{font-size:18px;line-height:1.7;color:var(--text)}
+.closing{padding:20px 0 100px}
+.closing-box{border-radius:34px;background:var(--navy);color:#fff;padding:58px 60px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.closing-box h2{font-size:clamp(28px,3.3vw,44px);line-height:1.12;font-weight:800;letter-spacing:-.02em;max-width:760px}
+.closing-box .btn{box-shadow:0 10px 30px rgba(0,0,0,.25)}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--line);background:#fff;padding:30px 0;font-size:15px;color:var(--muted)}
+.footer-in{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.footer a:hover{color:var(--red)}
+
+/* BACK TO TOP */
+.totop{position:fixed;right:26px;bottom:26px;width:56px;height:56px;border-radius:50%;border:0;background:linear-gradient(135deg,#d71f2d,#1d2a6e);color:#fff;font-size:22px;cursor:pointer;box-shadow:0 14px 30px rgba(215,31,45,.32);opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .3s,transform .3s;z-index:60}
+.totop.show{opacity:1;pointer-events:auto;transform:none}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.reveal.show{opacity:1;transform:none}
+
+:focus-visible{outline:2px solid var(--navy-2);outline-offset:3px}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .wrap{width:calc(100% - 56px)}
+  .links{gap:26px}
+  .j-hero-grid{grid-template-columns:1fr;gap:40px}
+  .j-copy{max-width:none}
+  .products{grid-template-columns:repeat(2,1fr)}
+  .inside-grid{grid-template-columns:repeat(2,1fr)}
+  .borders{grid-template-columns:1fr}
+}
+@media(max-width:860px){
+  .menu{display:block}
+  .links{display:none;position:absolute;top:100%;left:16px;right:16px;flex-direction:column;align-items:flex-start;gap:0;padding:12px 24px 18px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 20px 40px rgba(8,42,94,.14)}
+  .links.open{display:flex}
+  .links a{width:100%;padding:12px 0}
+  .links a.active::after{display:none}
+  .nav-in .btn{display:none}
+  .section-head{grid-template-columns:1fr;gap:14px}
+  .section-head p{justify-self:start}
+  .feature{grid-template-columns:1fr;border-radius:28px;max-height:none}
+  .feature>a{height:300px}
+  .feature img{min-height:300px;height:300px}
+  .feature-copy{padding:30px 26px 36px}
+  .oeb{grid-template-columns:1fr}
+  .oeb>div{border-right:0;border-bottom:1px solid var(--line)}
+  .oeb>div:last-child{border-bottom:0}
+  .row{grid-template-columns:1fr;gap:14px;padding:28px 26px}
+  .borders.second{grid-template-columns:1fr}
+  .closing-box{padding:40px 30px}
+}
+@media(max-width:600px){
+  body{font-size:16px}
+  .wrap{width:calc(100% - 36px)}
+  .nav-in{padding:0 18px}
+  .products,.inside-grid{grid-template-columns:1fr}
+  .product.wide{grid-column:auto}
+  .collage{gap:8px}
+  .collage figure{border-radius:20px}
+  .section{padding:48px 0}
+  .j-hero{padding:36px 0 44px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* ===== single-file additions ===== */
+.view{display:none}.view.active{display:block}
+[id^="h-"],[id^="j-"]{scroll-margin-top:110px}
+.section-head p+p{margin-top:12px}
+.section-head .stack{justify-self:end;max-width:720px}
+.section-head .stack p{font-size:19px;line-height:1.65;color:var(--text);justify-self:auto}
+.idea-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
+.idea-card{display:flex;flex-direction:column;gap:12px;padding:30px 32px 34px;border:1px solid var(--line);border-radius:30px;background:#fff;transition:transform .25s,box-shadow .25s,border-color .25s}
+.idea-card:hover{transform:translateY(-4px);box-shadow:0 24px 48px rgba(8,42,94,.1);border-color:#c9cfe2}
+.idea-card.span-2{grid-column:span 2}.idea-card.span-3{grid-column:span 3}
+.idea-card .logo-box{display:flex;align-items:center;min-height:96px}
+.idea-card .logo-box img{max-height:84px;max-width:55%;object-fit:contain}
+.idea-card h3{font-size:25px;line-height:1.2;font-weight:800;color:var(--ink)}
+.idea-card p{font-size:17px;line-height:1.7;color:var(--text);flex:1}
+.insights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.insight-card{display:flex;flex-direction:column;gap:12px;padding:34px 34px 36px;border-left:5px solid var(--red);background:var(--soft);transition:background .25s,transform .25s}
+.insight-card:hover{background:#eef0f8;transform:translateY(-3px)}
+.insight-card .no,.idea .no{font-size:36px;font-weight:800;color:var(--red);line-height:1}
+.insight-card h3{font-size:25px;line-height:1.25;font-weight:800;color:var(--ink)}
+.insight-card p{font-size:17px;line-height:1.7;color:var(--text);flex:1}
+.cap-note{margin-top:14px;font-size:15px;color:rgba(255,255,255,.65)}
+.row .link{margin-top:12px}
+.row .rt{display:flex;flex-direction:column;gap:6px}
+.product .link{margin-top:6px;font-size:16px}
+.product.wide{grid-column:span 2}
+.events{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.events .card-body p{font-size:17px;flex:1}
+.build-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:56px}
+.build-grid .oeb-lite{padding:36px 38px;border:1px solid var(--line);border-radius:30px;background:#fff}
+.build-grid h3{font-size:26px;font-weight:800;color:var(--ink);margin-bottom:12px;line-height:1.2}
+.build-grid p{font-size:18px;line-height:1.75}
+.people{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.people figure{margin:0}
+.people img{width:100%;border-radius:30px;aspect-ratio:4/3;object-fit:cover}
+.people figcaption{margin-top:12px;font-size:15px;color:var(--muted)}
+.people h2{font-size:clamp(28px,3vw,44px);line-height:1.12;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:18px}
+.people p{font-size:18px;line-height:1.75;margin-bottom:14px}
+.ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.idea{padding:32px 32px 34px;border:1px solid var(--line);border-radius:28px;background:#fff;display:flex;flex-direction:column;gap:12px;transition:transform .25s,box-shadow .25s}
+.idea:hover{transform:translateY(-3px);box-shadow:0 20px 40px rgba(8,42,94,.09)}
+.idea h3{font-size:23px;line-height:1.25;font-weight:800;color:var(--ink)}
+.idea p{font-size:17px;line-height:1.7}
+.photos{columns:3;column-gap:20px}
+.photos figure{margin:0 0 20px;break-inside:avoid}
+.photos img{width:100%;border-radius:26px;height:auto}
+.photos figcaption{padding:10px 4px 0;font-size:15px;color:var(--muted)}
+.notes{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.next-links{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:6px}
+.next-links a{color:#fff;font-weight:700;font-size:17px;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:3px}
+.next-links a:hover{border-color:#fff}
+.closing-box .txt{max-width:800px}
+.closing-box .txt p{color:rgba(255,255,255,.9);font-size:19px;line-height:1.7;margin-top:14px}
+
+/* story view */
+.s-hero{background:var(--navy);color:#fff;padding:56px 0 64px}
+.s-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.s-grid.solo{grid-template-columns:1fr;max-width:1000px}
+.s-copy{display:flex;flex-direction:column;gap:18px}
+.s-copy .kicker{font-size:15px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.s-copy h1{font-size:clamp(36px,4.4vw,64px);line-height:1.06;font-weight:800;letter-spacing:-.03em;color:#fff}
+.s-copy .lead{font-size:21px;line-height:1.6;color:rgba(255,255,255,.94)}
+.s-copy .det{font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.s-vis .logo-tile{background:#fff;border-radius:34px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:40px}
+.s-vis .logo-tile img{max-height:70%;max-width:70%;object-fit:contain}
+.s-vis .photo{border-radius:34px;overflow:hidden;aspect-ratio:4/3}
+.s-vis .photo img{width:100%;height:100%;object-fit:cover}
+.s-vis .collage{grid-template-columns:1fr 1fr}
+.article{padding:64px 0 30px}
+.a-body{width:min(780px,calc(100% - 48px));margin-inline:auto}
+.a-body p{font-size:19px;line-height:1.85;color:#38425a;margin-bottom:1.2em}
+.a-body>p:first-child{font-size:22px;line-height:1.6;color:var(--navy);font-weight:600}
+.a-body h3{font-size:30px;line-height:1.2;font-weight:800;color:var(--ink);margin:2em 0 .6em;letter-spacing:-.01em}
+.a-body blockquote{margin:2em 0;padding:24px 30px;border-left:5px solid var(--red);background:var(--soft);border-radius:0 22px 22px 0;font-size:25px;line-height:1.4;font-weight:800;color:var(--navy)}
+.a-body blockquote a{color:var(--red)}
+.a-body figure{margin:2em -60px}
+.a-body figure img{width:100%;border-radius:28px;max-height:560px;object-fit:cover}
+.a-body figcaption{margin-top:10px;font-size:15px;color:var(--muted);text-align:center}
+.a-end{width:min(780px,calc(100% - 48px));margin:40px auto 0;padding-top:28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.a-sign{font-size:14px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--navy)}
+.a-sign span{display:block;color:var(--red);margin-top:2px}
+.keep{padding:30px 0 90px}
+.keep h2{font-size:clamp(26px,3vw,40px);font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:24px}
+.keep-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.keep-grid a{display:flex;flex-direction:column;gap:8px;padding:28px 30px;border:1px solid var(--line);border-radius:26px;background:#fff;transition:transform .25s,box-shadow .25s}
+.keep-grid a:hover{transform:translateY(-3px);box-shadow:0 20px 40px rgba(8,42,94,.09)}
+.keep-grid strong{font-size:22px;line-height:1.25;color:var(--ink)}
+.keep-grid em{font-style:normal;font-size:16px;color:var(--text)}
+@media(max-width:1100px){
+  .idea-grid{grid-template-columns:repeat(2,1fr)}.idea-card.span-2,.idea-card.span-3{grid-column:span 1}
+  .idea-card:first-child{grid-column:span 2}
+  .insights,.events,.ideas{grid-template-columns:repeat(2,1fr)}
+  .notes{grid-template-columns:repeat(2,1fr)}
+  .s-grid,.people{grid-template-columns:1fr;gap:36px}
+  .photos{columns:2}
+  .a-body figure{margin-inline:0}
+  .section-head .stack{justify-self:start}
+}
+@media(max-width:700px){
+  .idea-grid,.insights,.events,.ideas,.notes,.build-grid,.keep-grid{grid-template-columns:1fr}
+  .idea-card:first-child{grid-column:auto}
+  .photos{columns:1}
+  .a-body blockquote{font-size:21px;padding:20px 22px}
+  .a-body h3{font-size:25px}.a-body p{font-size:17px}
+}
+
+/* ===== tighten spacing / remove empty gaps ===== */
+.section-head{align-items:start;margin-bottom:28px}
+.section-head>p{padding-top:6px}
+.section-head .stack{padding-top:6px}
+.section{padding:56px 0}
+.page-head{padding:44px 0 20px}
+.feature{margin-bottom:0}
+.inside{padding:30px 0 60px}
+.closing{padding:10px 0 70px}
+.idea-card .logo-box{min-height:84px}
+.idea-card{gap:10px;padding:26px 30px 30px}
+.insight-card{padding:28px 30px 30px}
+.build-grid{margin-bottom:40px}
+.borders{align-items:stretch}
+.borders .card.lead,.borders .card.side{height:100%}
+.borders .card.lead .ph,.borders .card.side .ph{aspect-ratio:auto;flex:1;min-height:260px}
+.borders .card.lead .ph img,.borders .card.side .ph img{height:100%}
+.borders .card.lead .ph{display:block}
+.photos{display:flex;flex-wrap:wrap;gap:20px;columns:auto}
+.photos figure{margin:0;flex:1 1 30%;min-width:0;break-inside:auto}
+.photos .frame{overflow:hidden;border-radius:26px;line-height:0}
+.photos img{width:100%;height:auto;display:block;border-radius:0;transition:transform .5s ease}
+.photos figure:hover img{transform:scale(1.03)}
+@media(max-width:1100px){.photos{columns:auto}}
+@media(max-width:700px){.photos figure{flex-basis:100%!important;width:100%!important}.section{padding:40px 0}}
+#view-home .page-head{padding:44px 0 90px}
+.feature{min-height:540px;max-height:none}
+.feature-copy{padding:56px 56px}
+@media(max-width:860px){.feature{min-height:0}}
+.borders .card.lead .ph,.borders .card.side .ph{position:relative;min-height:340px}
+.borders .card.lead .ph img,.borders .card.side .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media(max-width:1100px){.borders .card.lead .ph,.borders .card.side .ph{min-height:0;aspect-ratio:1.6/1}}
+
+
+</style>
+</head>
+<body>
+<main>
+<!-- ================= VIEW: PRODUCTS ================= -->
+<div class="view" id="view-home">
+  <section class="section" id="h-products">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h1>See the idea <span class="grad">before the detail</span></h1>
+        <p>A first look at the products taking shape across the IDF story. Open any product to read the thinking behind it.</p>
+      </div>
+      <div class="products">
+        <article class="product wide reveal"><div class="logo-box"><img src="assets/hyu-logo.png" alt="Hy U logo"></div><h3>Hy U</h3><p>A smart food and travel application that helps you discover restaurants, destinations and experiences through personalised recommendations.</p><a class="link" href="#/story/hyu">Read the story <span aria-hidden="true">→</span></a></article>
+        <article class="product reveal"><div class="logo-box"><img src="assets/hywa.jpeg" alt="HYWA logo"></div><h3>HYWA</h3><p>Heartificially Yours Working Angel is an advanced AI chatbot that understands intent and holds natural, human-like conversations.</p><a class="link" href="#/story/hywa">Read the story <span aria-hidden="true">→</span></a></article>
+        <article class="product reveal"><div class="logo-box"><img src="assets/hy-seizz.jpeg" alt="Hy Seizz logo"></div><h3>Hy Seizz</h3><p>A smart booking platform for restaurants and hotels, with real-time availability and simple, efficient reservations.</p><a class="link" href="#/story/hyseizz">Read the story <span aria-hidden="true">→</span></a></article>
+        <article class="product reveal"><div class="logo-box"><img src="assets/inaiba-logo.png" alt="Inaiba logo"></div><h3>Inaiba</h3><p>An AI-powered business analytics platform that turns raw data into real-time insights, predictions and smarter decisions.</p><a class="link" href="#/story/inaiba">Read the story <span aria-hidden="true">→</span></a></article>
+        <article class="product reveal"><div class="logo-box"><img src="assets/drmslp.png" alt="Dream Special logo"></div><h3>Dream Special</h3><p>Stories made personal. Explores personalized storytelling and calming sleep-time experiences designed around children’s imagination and interests.</p><a class="link" href="#/story/dream">Read the story <span aria-hidden="true">→</span></a></article>
+        <article class="product reveal"><div class="logo-box"><img src="assets/variworks.jpeg" alt="Vari Works logo"></div><h3>Vari Works</h3><p>Making GST management simpler. Explore intelligent workflows for GST calculations, filing and tax-related processes, helping businesses reduce unnecessary complexity.</p><a class="link" href="#/story/vari">Read the story <span aria-hidden="true">→</span></a></article>
+        <article class="product reveal"><div class="logo-box"><img src="assets/business-partner.jpeg" alt="Business Transformation Partner logo"></div><h3>Business Transformation Partner</h3><p>A vision for connected enterprise platforms that bring together digital experiences, automation, intelligent workflows and scalable technology.</p><a class="link" href="#/story/btp">Read the story <span aria-hidden="true">→</span></a></article>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= VIEW: PRODUCT STORY (rendered from data) ================= -->
+<div class="view" id="view-story">
+  <section class="s-hero"><div class="wrap s-grid" id="sGrid"></div></section>
+  <section class="article"><div class="a-body" id="aBody"></div>
+    <div class="a-end"><div class="a-sign">Iconic Dream Focus<span>Product Story</span></div><a class="link" id="aBack" href="#/"><span aria-hidden="true">←</span> Back</a></div>
+  </section>
+  <section class="keep" id="keep"><div class="wrap"><h2>More product stories</h2><div class="keep-grid" id="keepGrid"></div></div></section>
+</div>
+</main>
+
+<script>
+const STORIES={"hyu": {"group": "products", "name": "Hy U", "cat": "Products · Food & Travel", "details": "Hy U — Discover Food, Travel and Experiences", "title": "Beyond Search: Discovering Food and Travel Your Way", "lead": "A smart food and travel application that understands your interests and helps you find the right restaurants, destinations and experiences.", "visual": {"t": "logo", "src": "assets/hyu-logo.png"}, "blocks": [{"p": "Finding a good place to eat or a destination worth visiting should feel exciting, not exhausting. Yet most people still spend long hours scrolling through lists, comparing reviews and switching between apps before they decide."}, {"p": "Hy U is a smart food and travel application developed to improve the way users discover restaurants, destinations and experiences. It focuses on personalised recommendations by understanding what each user likes, so the right options reach them faster."}, {"h": "What Hy U Offers"}, {"p": "Hy U brings curated suggestions, easy navigation and a simple interface together in one place. Instead of sorting through endless results, users are shown options that match their interests and preferences, making it easier to move from discovering something to actually experiencing it."}, {"h": "One Ecosystem, Connected Experiences"}, {"p": "Hy U is the foundation of a wider ecosystem. HYWA — Heartificially Yours Working Angel — is the AI chatbot within Hy U, helping users ask questions and get guidance through natural conversation. Hy Seizz is the smart booking platform within Hy U, allowing users to reserve restaurant tables and hotel rooms. Together they cover the full journey: discover, ask and book."}, {"h": "Designed Around People"}, {"p": "A discovery application is only useful if it is easy to use. Hy U keeps its interface clean and simple, so that food lovers and travellers can find suitable options quickly, without needing to learn complicated menus or filters."}, {"h": "How Helpful Is It to the Market?"}, {"p": "Discovery today is scattered. People search for restaurants in one app, plan travel in another and ask friends for recommendations somewhere else. That repeated effort costs time, and the results are often generic rather than personal."}, {"p": "Hy U reduces search time and delivers a more convenient experience for food and travel enthusiasts. For restaurants, hotels and local experience providers, it offers a way to reach people who are actively looking for exactly what they provide. Every connected experience, such as HYWA and Hy Seizz, makes the whole platform more useful."}, {"h": "The Technology Behind It"}, {"p": "Hy U is built as a connected platform rather than a single feature. A shared foundation manages user accounts, preferences, location and content, so every experience inside the ecosystem can reuse the same information. Recommendation and personalisation logic then uses interests and context to decide what to show each user."}, {"p": "Map and location services connect digital discovery with real-world places, while a cloud-hosted backend allows the application to grow with usage. Personal data is handled with access controls and privacy in mind from the start."}, {"h": "How It Is Built"}, {"p": "The platform is built step by step, beginning with the core journey of discovering, choosing and experiencing. This journey is tested as a simple prototype with real scenarios, and only when it feels natural are new features added on the same foundation."}, {"p": "A consistent design language keeps every part familiar, while a modular structure lets each experience improve independently. Feedback from real use decides what to refine next, so Hy U grows around what people actually need."}, {"h": "Looking Ahead"}, {"p": "Hy U is an evolving vision of smarter discovery — one where finding the right restaurant or destination takes moments, not hours, and every recommendation feels made for the person receiving it."}, {"q": "The idea we’re building toward is simple: help people find the food, places and experiences that matter to them."}], "more": ["hywa", "hyseizz", "inaiba", "dream", "vari", "btp"]}, "hywa": {"group": "products", "name": "HYWA", "cat": "Products · Artificial Intelligence", "details": "HYWA — Heartificially Yours Working Angel", "title": "Beyond Commands: An AI Chatbot That Feels Natural", "lead": "An advanced AI chatbot that understands questions, recognises intent and responds in a more human-like way.", "visual": {"t": "logo", "src": "assets/hywa.jpeg"}, "blocks": [{"p": "Most people don’t think in commands. They think in questions, half-formed ideas and small requests that depend on what was said a moment ago. Yet much of the technology around us still expects people to adapt to it, not the other way round."}, {"p": "HYWA — Heartificially Yours Working Angel — is an advanced AI chatbot designed to provide intelligent and interactive conversations. It is the AI assistant within the Hy U ecosystem, built to feel less like a tool you operate and more like a helper you can talk to."}, {"h": "How HYWA Understands You"}, {"p": "HYWA uses artificial intelligence to understand user questions, recognise the intent behind them and generate relevant responses. It adapts to the conversation in real time, so a request can begin loosely, become clearer and change direction without starting over."}, {"h": "A Human-Like Experience"}, {"p": "A good conversation depends on more than the words in a single question. By keeping track of the flow of the discussion, HYWA provides a communication experience that feels natural, continuous and easy to follow."}, {"h": "Supporting Businesses"}, {"p": "HYWA is not only for individual users. It can help businesses automate customer interactions, answer common queries instantly and improve user engagement through AI-based assistance, while allowing teams to focus on the conversations that need a personal touch."}, {"h": "Helpful, Not Overwhelming"}, {"p": "An assistant earns trust by being clear. Answers should be relevant, suggestions should be easy to understand, and users should always feel in control. HYWA is designed to be honest about what it can do and careful with the information it works with."}, {"h": "How Helpful Is It to the Market?"}, {"p": "Many digital products still ask people to learn their menus, filters and rules. Businesses, meanwhile, face a steady stream of repeated customer questions that take time to answer, especially outside working hours."}, {"p": "HYWA addresses both sides. For users, it makes getting answers faster and interactions easier. For businesses, it offers round-the-clock responses, consistent communication and better engagement without growing support teams at the same pace."}, {"h": "The Technology Behind It"}, {"p": "HYWA is built on conversational AI, using language models and natural language understanding to interpret what a person is asking, even when the request is informal or incomplete. Intent recognition identifies what the user wants, and context handling lets the chatbot remember earlier messages within a conversation."}, {"p": "Response generation is grounded in the information available within the Hy U ecosystem, so answers stay relevant. Safeguards, accuracy testing and careful handling of personal information sit around the model, supported by cloud services that keep responses fast and allow the system to scale."}, {"h": "How It Is Built"}, {"p": "The work starts with real conversations: what people actually ask and where assistance genuinely helps. From there, the dialogue is designed and early versions are tested against realistic and deliberately difficult questions, including cases where the right response is to admit uncertainty."}, {"p": "Quality is reviewed continuously. Responses are evaluated, mistakes are studied and the chatbot is refined with each iteration. Privacy and security are part of the design from the first version, not added after launch."}, {"h": "Looking Ahead"}, {"p": "HYWA is an evolving idea about how people and AI can communicate more naturally. The aim is simple: make digital conversations feel a little more human, and a lot more helpful."}, {"q": "The best assistant is the one that makes the technology fade into the background."}, {"q": "Read how HYWA fits into the wider Hy U ecosystem.", "link": "hyu"}], "more": ["hyu", "hyseizz", "inaiba", "dream", "vari", "btp"]}, "hyseizz": {"group": "products", "name": "Hy Seizz", "cat": "Products · Smart Booking", "details": "Hy Seizz — Smart Restaurant and Hotel Booking", "title": "Beyond Reservations: Booking Made Simple", "lead": "A smart booking platform for restaurants and hotels, with real-time availability and a smooth path from choice to confirmation.", "visual": {"t": "logo", "src": "assets/hy-seizz.jpeg"}, "blocks": [{"p": "Deciding where to eat or stay is only half the task. The other half is making it happen: checking availability, confirming a table or a room, and hoping nothing changes along the way. When booking is slow or unclear, even a great choice can turn into a frustrating experience."}, {"p": "Hy Seizz is a smart booking platform that makes restaurant and hotel reservations simple and efficient. It is the booking experience within the Hy U ecosystem, helping people move from finding a place to securing it in just a few steps."}, {"h": "Real-Time Availability"}, {"p": "Hy Seizz provides real-time availability information, so users can see what is open before they commit. This removes the back-and-forth of calling, waiting for replies and discovering too late that a table or room is no longer available."}, {"h": "Simple, Intuitive Booking"}, {"p": "Users can book tables or rooms through an intuitive interface designed to keep each step clear and quick. The goal is a booking process that feels effortless, whether someone is planning a quiet dinner, a family weekend or a business trip."}, {"h": "Built for Businesses Too"}, {"p": "Hy Seizz helps restaurants and hotels manage reservations in one place, optimise occupancy and improve customer service. By automating the booking process, it creates a smooth connection between customers and service providers and reduces manual effort for staff."}, {"h": "Part of a Connected Journey"}, {"p": "Hy Seizz is not designed to stand alone. Within the Hy U ecosystem, a place discovered in Hy U can be booked through Hy Seizz, and HYWA can answer questions along the way. Together they turn a single idea into a confirmed plan."}, {"h": "How Helpful Is It to the Market?"}, {"p": "Bookings are still managed through phone calls, messages and separate systems in many restaurants and hotels. That leads to missed enquiries, double bookings, empty tables and rooms, and customers who give up before they finish."}, {"p": "Hy Seizz helps close that gap. Customers get certainty and convenience, while businesses gain better visibility of their reservations, fewer manual errors and a more reliable way to fill available tables and rooms. In a hospitality and travel market that keeps growing, a faster and clearer booking experience is a real advantage."}, {"h": "The Technology Behind It"}, {"p": "At its core is a reservation engine that tracks availability in real time and prevents conflicting bookings. Booking workflows handle selection, confirmation and changes, while an admin dashboard lets restaurants and hotels manage reservations and monitor occupancy."}, {"p": "Integration with the wider Hy U ecosystem connects booking with user accounts and with HYWA. A cloud-hosted backend keeps the platform responsive as usage grows, and customer details are handled with secure access controls."}, {"h": "How It Is Built"}, {"p": "The build begins with understanding how reservations actually work for restaurants and hotels: peak times, cancellations, changing availability and the points where customers hesitate. That shapes a booking flow that is short, clear and dependable."}, {"p": "Early versions are tested with realistic scenarios such as last-minute bookings, group reservations and cancellations. Because booking is only as good as its accuracy, keeping availability up to date is treated as a core part of the product, not an afterthought."}, {"q": "A great booking is one you barely notice — simple to make, and certain when it matters."}, {"q": "Read how Hy Seizz fits into the wider Hy U ecosystem.", "link": "hyu"}], "more": ["hyu", "hywa", "inaiba", "dream", "vari", "btp"]}, "inaiba": {"group": "products", "name": "INAIBA", "cat": "Products · AI Business Analytics", "details": "INAIBA — From Data to Direction", "title": "Beyond the Numbers: Turning Data into Decisions", "lead": "An AI-powered business analytics platform that converts complex, raw data into meaningful insights for smarter decision-making.", "visual": {"t": "logo", "src": "assets/inaiba-logo.png"}, "blocks": [{"p": "Every business generates data. Orders reveal demand, revenue reflects performance and customer activity hints at changing preferences. Yet raw data on its own rarely tells a business what to do next."}, {"p": "INAIBA is an AI-powered business analytics platform that helps organisations convert complex, raw data into meaningful business insights. It combines data analytics, artificial intelligence and machine learning techniques to support smarter, faster decision-making."}, {"h": "What INAIBA Does"}, {"p": "The platform enables businesses to monitor real-time data, identify patterns, predict future outcomes and improve operational efficiency. Instead of waiting for manual reports, decision-makers can see what is happening in the business as it happens."}, {"h": "Key Capabilities"}, {"p": "Predictive modelling uses historical patterns to estimate what may happen next. Interactive visualisations make performance easy to explore, from a high-level overview down to the finer detail. Real-time analytics keep insights current, helping companies understand their data and act on it with confidence."}, {"h": "Trust Begins with Data Quality"}, {"p": "Missing values, duplicate records, inconsistent categories and incorrect dates can distort any analysis. INAIBA treats data preparation and validation as essential steps, because insights are only as reliable as the data behind them. Predictions are presented as estimates, not guarantees, and are meant to support human judgement rather than replace it."}, {"h": "How Helpful Is It to the Market?"}, {"p": "Most businesses already have data, but it often sits in spreadsheets, exports and disconnected tools. Smaller and mid-sized companies in particular rarely have a dedicated analytics team, so important questions go unanswered: which region is slowing down, which products are driving growth, or what next quarter might look like."}, {"p": "INAIBA brings analytics, prediction and visualisation into one platform. That helps owners and managers spot problems earlier, plan with more evidence and spend less time preparing reports by hand, so strategic decisions can be made faster."}, {"h": "The Technology Behind It"}, {"p": "The foundation is a data preparation layer that imports information and checks it for errors before analysis begins. On top of it sits an analytics engine that compares performance across products, categories, regions and time periods, combined with machine learning models for pattern detection and predictive modelling."}, {"p": "Each prediction is evaluated against past results so that errors stay visible. Real-time data processing feeds interactive dashboards that present the overall picture first and let users drill into detail, all on secure, cloud-based storage with controlled access to business data."}, {"h": "How It Is Built"}, {"p": "The build starts with the questions decision-makers actually ask, then works backwards to the data needed to answer them. The pipeline comes first — import, validate, model, visualise — because dashboards are only as trustworthy as the data beneath them."}, {"p": "Predictive models are tested against historical data before they are trusted, and metric definitions are kept consistent so the same number means the same thing everywhere. Dashboards are refined with realistic data and real questions, so the experience helps people see what matters rather than simply displaying more charts."}, {"h": "Looking Ahead"}, {"p": "INAIBA is built around a clear direction: help businesses understand what their data is saying, and turn that understanding into confident action."}, {"q": "Data becomes valuable when people can understand it, trust it, and use it to make better decisions."}], "more": ["hyu", "hywa", "hyseizz", "dream", "vari", "btp"]}, "dream": {"group": "products", "name": "Dream Special", "cat": "Products · Personal Storytelling", "details": "Dream Special — Where Stories Become Personal", "title": "Beyond the Page: Creating Stories That Feel Personal", "lead": "Exploring personalised storytelling that brings children’s interests and imagination into the experience.", "visual": {"t": "logo", "src": "assets/drmslp.png"}, "blocks": [{"p": "Every child imagines differently. One might dream of travelling through space, another might invent a magical forest, and another might picture an adventure with a favourite animal. Stories give these imaginations a place to grow."}, {"p": "Dream Special explores how technology can make storytelling more personal by allowing a child’s interests and imagination to shape the experience. Instead of every story following the same path, the concept creates room for different characters, settings, themes, and adventures."}, {"h": "An Experience Shaped by Imagination"}, {"p": "Personalisation can begin with a child’s favourite topic, an imaginary character, or a world they would love to explore. These details can become the starting point for a story that feels familiar while still introducing something new. The goal is not simply to generate different words, but to create an engaging narrative with a clear journey and satisfying ending."}, {"h": "Technology with a Human Purpose"}, {"p": "Technology can support creativity by making it easier to explore different story ideas and variations. But it should not replace the shared experience that storytelling creates between children and their families. A story can become a bedtime ritual, an invitation to draw a new character, or a conversation about courage, kindness, or friendship."}, {"h": "How Helpful Is It to the Market?"}, {"p": "Families look for screen time that feels meaningful, and bedtime routines that children genuinely enjoy. Fixed story libraries eventually repeat, and the same book can only reflect one child’s interests so far. Personalised stories offer something different: a story that starts with the child’s own imagination."}, {"p": "For parents, Dream Special can make bedtime a more engaging and calming ritual and encourage a child’s interest in stories and creativity. It can also open conversations about courage, kindness and friendship. In a market built around children, trust matters most, so safe content, age-appropriate language and careful handling of personal information are core to its value, not extras."}, {"h": "The Technology Behind It"}, {"p": "Dream Special uses generative language models, guided by prompts built from a child’s interests, favourite characters and chosen themes. A story structure — a clear beginning, a journey and a gentle, satisfying ending — keeps each story coherent instead of a loose stream of generated text."}, {"p": "Content safety checks and age-appropriate language rules sit around the generation step, and audio narration can support the calming sleep-time experience. Personal details are handled with privacy in mind, and cloud services keep the experience responsive."}, {"h": "How It Is Built"}, {"p": "The build begins with a simple question: what makes a good bedtime story? Tone, pacing and endings are defined first, and the technology is shaped to serve them. Early prompts and story structures are tested for narrative quality, calmness and suitability for children of different ages."}, {"p": "Safety is reviewed at every stage. Generated stories are checked against clear content rules and reviewed by people, and the feedback from those reviews feeds directly into the next iteration. The aim is not more stories, but better ones."}, {"h": "Looking Ahead"}, {"p": "Age-appropriate language, safe content, and careful handling of personal information are essential considerations. Dream Special explores the possibility that a story can feel more meaningful when it reflects the person imagining it."}, {"q": "Every child has a world of their own. A good story gives that world somewhere to begin."}], "more": ["hyu", "hywa", "hyseizz", "inaiba", "vari", "btp"]}, "vari": {"group": "products", "name": "Vari Works", "cat": "Products · Intelligent Workflows", "details": "Vari Works — Bringing Clarity to GST Workflows", "title": "Beyond Paperwork: Rethinking Everyday Compliance", "lead": "Making GST-related tasks easier to organise, track, and manage through structured digital workflows.", "visual": {"t": "logo", "src": "assets/variworks.jpeg"}, "blocks": [{"p": "Behind every business transaction is a process. Information must be recorded, documents need to be organised, figures must be checked, and deadlines require attention. When these activities are spread across multiple files and disconnected workflows, routine work can become unnecessarily complicated."}, {"p": "Vari Works explores how digital workflows can bring greater structure and clarity to GST-related tasks. The idea is to help users organise information, follow repeatable processes, identify missing details, and understand what still requires attention."}, {"h": "Making the Process Easier to Follow"}, {"p": "A well-structured workflow helps people see what has been completed, what remains unfinished, and where an issue needs review. Clear organisation can reduce the effort spent switching between records and repeating manual steps. Where appropriate, automation can assist with repetitive tasks and validation checks."}, {"h": "Accuracy Still Matters"}, {"p": "Compliance-related work requires careful handling of information. Incorrect entries, incomplete records, or inconsistent classifications can create problems further along the process. Technology can help organise and check information, but it cannot remove the need for appropriate review. GST rules and reporting requirements may change, so workflows should be used alongside current official guidance and professional advice when needed."}, {"h": "Designed for Real Business Needs"}, {"p": "A useful system should make the next step clear, keep information accessible, and help users manage responsibilities consistently. Vari Works reflects a practical approach to digital tools: simplify the process where possible, maintain visibility where it matters, and support accuracy throughout the work."}, {"h": "How Helpful Is It to the Market?"}, {"p": "GST work is recurring, detailed and unforgiving. Businesses with small finance teams — and accountants handling many clients — often manage records across multiple files, repeat entries by hand and discover missing information only close to a deadline. Each of those steps costs time, and mistakes can lead to rework or compliance issues."}, {"p": "Vari Works aims to reduce that burden by making the process structured and visible. Users can see what is complete, what is missing and what needs review, which helps catch gaps early and keeps routine work consistent. Because GST rules and reporting requirements change, it is designed to support — not replace — current official guidance and professional advice."}, {"h": "The Technology Behind It"}, {"p": "At its core is a workflow engine that organises GST tasks into clear steps with visible status. Structured forms capture information consistently, calculation logic handles tax amounts, and validation rules flag missing fields, inconsistent classifications and figures that do not add up."}, {"p": "Automation takes over repetitive steps, document and record organisation keeps related information together, and an audit trail with access controls shows who changed what and when. The platform runs on secure cloud infrastructure so teams can work from one shared, up-to-date view."}, {"h": "How It Is Built"}, {"p": "The build starts by mapping the real process, from the first invoice or record to final filing, with the people who do the work. Each step is turned into a workflow, and rules are kept configurable so they can be updated when requirements change instead of rebuilt from scratch."}, {"p": "Testing relies on realistic sample scenarios and edge cases, since compliance problems usually hide in unusual situations. Human review points are built in deliberately, and feedback from accountants and finance teams drives each iteration."}, {"q": "Compliance may be complex, but the process of managing it can be clearer."}], "more": ["hyu", "hywa", "hyseizz", "inaiba", "dream", "btp"]}, "btp": {"group": "products", "name": "Business Transformation Partner", "cat": "Products · Enterprise Platforms", "details": "Business Transformation Partner — Connecting the Enterprise", "title": "Beyond Integration: Making Technology Work as One", "lead": "Bringing systems, information, and workflows together to help businesses operate more effectively.", "visual": {"t": "logo", "src": "assets/business-partner.jpeg"}, "blocks": [{"p": "As businesses grow, their technology environments often grow with them. Teams adopt different tools, workflows develop independently, and information becomes scattered across systems. Each tool may serve a purpose, yet the overall operation can become harder to coordinate."}, {"p": "Business Transformation Partner explores how integrated systems, connected workflows, and thoughtful automation can help businesses work as a more coordinated whole."}, {"h": "Understanding the Business First"}, {"p": "Digital transformation should begin with the way a business operates, not with a decision to introduce new technology. Understanding where delays occur, which tasks require repeated manual effort, and where information becomes difficult to access helps identify changes that could create genuine value."}, {"h": "Connecting Systems and Workflows"}, {"p": "Integration can help information move more consistently between applications. Automation can reduce repetitive tasks, while shared views can help teams follow progress and identify issues. Data quality, security, access permissions, existing infrastructure, and operational requirements all influence the right approach."}, {"h": "Making Change Sustainable"}, {"p": "A successful transformation is not defined only by the launch of a platform. People need to understand and use the new processes, systems need to remain reliable, and improvements must continue as the organisation evolves."}, {"h": "How Helpful Is It to the Market?"}, {"p": "As businesses grow, their tools multiply. Sales, finance, operations and customer teams each adopt what works for them, and soon the same information is entered in several places, reports disagree and nobody has a complete view. The cost shows up as delays, rework and decisions made on partial information."}, {"p": "Business Transformation Partner aims to connect those pieces. By integrating systems and automating repetitive handoffs, it can reduce duplicate effort, improve visibility for teams and leadership, and make the whole operation easier to coordinate. The value is greatest for growing and established organisations that want to modernise without discarding the systems they already depend on."}, {"h": "The Technology Behind It"}, {"p": "Integration is the backbone: APIs and connectors that let applications exchange information consistently. Workflow automation handles repetitive tasks and approvals, while a centralised data layer feeds shared dashboards so teams can follow progress from the same view."}, {"p": "Identity and access management ensures people see only what they should, and cloud infrastructure with monitoring, backups and recovery planning keeps the platform reliable. The architecture is designed to scale as the organisation and its needs grow."}, {"h": "How It Is Built"}, {"p": "The work begins with understanding the business: mapping how processes really run, where delays occur and which tasks consume repeated manual effort. Those findings decide what to change first, so effort goes where it creates genuine value."}, {"p": "Integration is delivered in stages rather than as a single large switch-over, with security, permissions and data quality planned from the start. Teams are supported as they adopt new processes, and the platform keeps improving as the organisation evolves."}, {"q": "Transformation is not about adding more technology. It is about helping the whole business work better."}], "more": ["hyu", "hywa", "hyseizz", "inaiba", "dream", "vari"]}};
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const $=id=>document.getElementById(id);
+const views={home:$('view-home'),story:$('view-story')};
+let current='#/';
+
+
+/* REVEAL */
+const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -20px 0px'}):null;
+document.querySelectorAll('.reveal').forEach(el=>io?io.observe(el):el.classList.add('show'));
+
+/* STORY RENDER */
+function renderStory(key){
+  const s=STORIES[key];if(!s)return false;
+  const vis=`<div class="s-vis"><div class="logo-tile"><img src="${s.visual.src}" alt="${esc(s.name||s.title)} logo"></div></div>`;
+  const g=$('sGrid');g.className='wrap s-grid';
+  g.innerHTML=`<div class="s-copy"><a class="back" id="sBack" href="#/"><span aria-hidden="true">←</span> <span id="sBackTxt">Products</span></a><div class="kicker">${esc(s.cat)}</div><h1>${esc(s.title)}</h1><p class="lead">${esc(s.lead)}</p><div class="det">${esc(s.details)}</div></div>${vis}`;
+  $('aBody').innerHTML=s.blocks.map(b=>{
+    if(b.h)return `<h3>${esc(b.h)}</h3>`;
+    if(b.p)return `<p>${esc(b.p)}</p>`;
+    if(b.q)return `<blockquote>${b.link?`<a href="#/story/${b.link}">${esc(b.q)} →</a>`:esc(b.q)}</blockquote>`;
+    return '';}).join('');
+  const picks=(s.more||[]).filter(k=>STORIES[k]).slice(0,2);
+  $('keepGrid').innerHTML=picks.map(k=>`<a href="#/story/${k}"><div class="eyebrow">${esc(STORIES[k].cat)}</div><strong>${esc(STORIES[k].title)}</strong><em>${esc(STORIES[k].lead)}</em></a>`).join('');
+  $('keep').style.display=picks.length?'':'none';
+  document.title=s.title+' — '+s.name+' | Iconic Dream Focus';
+  return true;
+}
+
+/* ROUTER (click-driven, works even where hashchange is blocked, e.g. preview panes) */
+let rendered=null;
+function route(hash){
+  hash=hash||'#/';
+  const raw=hash.replace(/^#\/?/,'');
+  const [name,arg]=raw.split('/');
+  let view='home';
+  if(name==='story'&&renderStory(arg)){view='story'}
+  else hash='#/';
+  Object.entries(views).forEach(([k,el])=>el.classList.toggle('active',k===view));
+  if(view==='home')document.title='Products — Ideas taking shape | Iconic Dream Focus';
+  if(view==='story'){
+    const back=$('sBack'),backEnd=$('aBack');
+    const target=rendered&&rendered!==hash?rendered:'#/';
+    const label=target.startsWith('#/story')?'Previous story':'Products';
+    back.setAttribute('href',target);backEnd.setAttribute('href',target);
+    $('sBackTxt').textContent=label;
+    backEnd.innerHTML='<span aria-hidden="true">←</span> Back to '+label.toLowerCase();
+  }
+  rendered=hash;
+  scrollTo(0,0);
+}
+function go(hash){hash=hash||'#/';if(hash!==rendered)route(hash)}
+document.addEventListener('click',e=>{
+  const a=e.target.closest&&e.target.closest('a[href^="#/"]');
+  if(!a||e.ctrlKey||e.metaKey||e.shiftKey||e.button===1)return;
+  e.preventDefault();
+  const h=a.getAttribute('href');
+  go(h);
+  try{if(location.hash!==h)history.pushState(null,'',h)}catch(_){}
+});
+addEventListener('popstate',()=>go(location.hash||'#/'));
+addEventListener('hashchange',()=>go(location.hash||'#/'));
+route(location.hash||'#/');
+</script>
+</body>
+</html>
